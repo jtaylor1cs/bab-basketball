@@ -7,7 +7,7 @@ const programs = [
     title: 'Group Sessions',
     description:
       'Small group training capped at 10 players. High energy, competitive reps, and skill development in a team environment. Perfect for players who want to level up alongside their peers.',
-    details: ['Max 10 players per session', 'Grades 1–12', 'Skill-based drills & competition'],
+    details: ['Max 10 players per session', 'Grades K–12', 'Skill-based drills & competition'],
     accentColor: '#B94B35',
     image: groupImage,
     imageAlt: 'Youth basketball group training session',
@@ -17,7 +17,7 @@ const programs = [
     title: '1-on-1 Training',
     description:
       'Private sessions built around you. Every rep, every drill, every minute is focused on your individual game. Ideal for players serious about reaching the next level.',
-    details: ['Fully personalized program', 'Grades 1–12', 'Position-specific development'],
+    details: ['Fully personalized program', 'Grades K–12', 'Position-specific development'],
     accentColor: '#4A7FA5',
     image: oneOnOneImage,
     imageAlt: 'One on one basketball training session',
