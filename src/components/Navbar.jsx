@@ -16,9 +16,9 @@ function Navbar() {
     alt="BAB Training Logo"
     style={{ height: '120px', width: 'auto' }}
   />
-  <h1 style={{ color: '#2C1A0E' }} className="text-2xl font-bold tracking-wide">
+  {/* <h1 style={{ color: '#2C1A0E' }} className="text-2xl font-bold tracking-wide">
     BAB <span style={{ color: '#B94B35' }}>Training</span>
-  </h1>
+  </h1> */}
 </div>
 
       <ul style={{ color: '#2C1A0E' }} className="flex items-center gap-8 list-none text-lg font-bold tracking-wide m-0 p-0">
