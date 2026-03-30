@@ -37,7 +37,7 @@ function About() {
           <p style={{ color: '#2C1A0E' }} className="leading-relaxed text-lg opacity-80">
             I started BAB Training because I genuinely love this game and
             want to pass that on. Great coaches changed my path and I want
-            to be able to make an impact for the next generation of kids also.
+            to be able to make an impact for the next generation of hoopers.
           </p>
 
           <button
