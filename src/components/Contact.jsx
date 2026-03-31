@@ -51,7 +51,7 @@ function Contact() {
             </a>
 
             
-            <a  href="https://instagram.com/babtraining"
+            <a  href="https://instagram.com/bab.training"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-4 hover:opacity-70 transition"

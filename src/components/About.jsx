@@ -41,11 +41,12 @@ function About() {
           </p>
 
           <button
-            style={{ backgroundColor: '#B94B35', color: '#EDE8D5' }}
-            className="py-3 px-8 font-bold rounded tracking-wide hover:opacity-90 transition w-fit"
-          >
-            Work With Me
-          </button>
+  style={{ backgroundColor: '#B94B35', color: '#EDE8D5' }}
+  className="py-3 px-8 font-bold rounded tracking-wide hover:opacity-90 transition w-fit"
+  onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+>
+  Work With Me
+</button>
         </div>
 
         <div className="flex-1 relative hidden md:block" style={{ height: '520px' }}>
