@@ -64,7 +64,7 @@ function Contact() {
               </div>
               <div>
                 <p style={{ color: '#2C1A0E' }} className="font-bold">Instagram</p>
-                <p style={{ color: '#2C1A0E' }} className="opacity-60 text-sm">@babtraining</p>
+                <p style={{ color: '#2C1A0E' }} className="opacity-60 text-sm">@bab.training</p>
               </div>
             </a>
           </div>
