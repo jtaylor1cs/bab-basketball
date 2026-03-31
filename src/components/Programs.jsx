@@ -4,47 +4,50 @@ import oneOnOneImage from '../assets/YouthBasketball1-on-1.jpg'
 const programs = [
   {
     id: 1,
-    title: 'Group Sessions',
-    description:
-      'Small group training capped at 10 players. High energy, competitive reps, and skill development in a team environment. Perfect for players who want to level up alongside their peers.',
-    details: ['Max 10 players per session', 'Grades K–12', 'Skill-based drills & competition'],
+    tag: 'Ages 6-10',
+    title: 'Junior Ballers',
+    grades: 'Grades 1-5',
+    description: 'Building the foundation the right way. We focus on fundamentals, coordination, ball handling, footwork, and keeping the game fun with competitive drills and games.',
+    options: [
+      { type: 'Group Sessions', detail: '4-8 players', price: '$50 / player' },
+      { type: '1-on-1 Training', detail: 'Private session', price: '$90 / session' },
+    ],
     accentColor: '#B94B35',
     image: groupImage,
-    imageAlt: 'Youth basketball group training session',
+    imageAlt: 'Youth basketball group training',
   },
   {
     id: 2,
-    title: '1-on-1 Training',
-    description:
-      'Private sessions built around you. Every rep, every drill, every minute is focused on your individual game. Ideal for players serious about reaching the next level.',
-    details: ['Fully personalized program', 'Grades K–12', 'Position-specific development'],
+    tag: 'Ages 11-18',
+    title: 'Varsity Prep',
+    grades: 'Grades 6-12',
+    description: 'Training built for players who want to compete at the next level. Advanced ball handling, shooting mechanics, game IQ, and position-specific work at game speed.',
+    options: [
+      { type: 'Group Sessions', detail: '4-8 players', price: '$50 / player' },
+      { type: '1-on-1 Training', detail: 'Private session', price: '$90 / session' },
+    ],
     accentColor: '#4A7FA5',
     image: oneOnOneImage,
-    imageAlt: 'One on one basketball training session',
+    imageAlt: 'One on one basketball training',
   },
 ]
 
 function Programs() {
   return (
-    <section id="programs" style={{ backgroundColor: '#F5EFE0'}} >
-
+    <section id="programs" style={{ backgroundColor: '#F5EFE0' }} className="py-32">
       <div className="text-center mb-20 px-8">
-        <p
-          style={{ color: '#2D6A5A' }}
-          className="text-sm font-bold tracking-widest uppercase mb-3"
-        >
+        <p style={{ color: '#B94B35' }} className="text-sm font-bold tracking-widest uppercase mb-3">
           What We Offer
         </p>
         <h2 style={{ color: '#2C1A0E' }} className="text-5xl font-bold mb-4">
           Training Programs
         </h2>
         <p style={{ color: '#2C1A0E' }} className="text-lg opacity-50 max-w-xl mx-auto">
-          Sessions are priced competitively for private and group training —
-          reach out to discuss availability and rates.
+          Every session is led by an active college basketball player with 5+ years of coaching experience.
         </p>
       </div>
 
-      <div className="flex flex-col gap-2 px-8 max-w-6xl mx-auto">
+      <div className="flex flex-col gap-6 px-8 max-w-6xl mx-auto">
         {programs.map((program, index) => (
           <div
             key={program.id}
@@ -56,7 +59,7 @@ function Programs() {
             }}
             className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
           >
-            <div className="flex-1 relative" style={{ minHeight: '480px' }}>
+            <div className="flex-1 relative" style={{ minHeight: '420px' }}>
               <img
                 src={program.image}
                 alt={program.imageAlt}
@@ -77,47 +80,52 @@ function Programs() {
                   textTransform: 'uppercase',
                 }}
               >
-                {program.title}
+                {program.tag}
               </div>
             </div>
 
             <div
               style={{ backgroundColor: '#EDE8D5' }}
-              className="flex-1 flex flex-col justify-center gap-6 px-12 py-12"
+              className="flex-1 flex flex-col justify-center gap-5 px-10 py-10"
             >
-              <div
-                style={{
-                  width: '40px',
-                  height: '8px',
-                  backgroundColor: program.accentColor,
-                  borderRadius: '2px',
-                }}
-              />
-              <h3 style={{ color: '#2C1A0E' }} className="text-4xl font-bold">
-                {program.title}
-              </h3>
-              <p style={{ color: '#2C1A0E' }} className="opacity-70 leading-relaxed text-lg">
+              <div>
+                <p style={{ color: program.accentColor }} className="text-sm font-bold tracking-widest uppercase mb-1">
+                  {program.grades}
+                </p>
+                <h3 style={{ color: '#2C1A0E' }} className="text-4xl font-bold">
+                  {program.title}
+                </h3>
+              </div>
+
+              <p style={{ color: '#2C1A0E' }} className="opacity-70 leading-relaxed">
                 {program.description}
               </p>
-              <ul className="flex flex-col gap-3">
-                {program.details.map((detail, i) => (
-                  <li
+
+              <div className="flex flex-col gap-3">
+                {program.options.map((option, i) => (
+                  <div
                     key={i}
-                    style={{ color: '#2C1A0E' }}
-                    className="flex items-center gap-3 text-sm font-bold tracking-wide"
+                    style={{ border: '2px solid #2C1A0E', borderRadius: '8px' }}
+                    className="flex justify-between items-center px-5 py-3"
                   >
-                    <span style={{ color: program.accentColor }} className="text-lg">✓</span>
-                    {detail}
-                  </li>
+                    <div>
+                      <p style={{ color: '#2C1A0E' }} className="font-bold">{option.type}</p>
+                      <p style={{ color: '#2C1A0E' }} className="text-sm opacity-50">{option.detail}</p>
+                    </div>
+                    <p style={{ color: program.accentColor }} className="text-lg font-bold">
+                      {option.price}
+                    </p>
+                  </div>
                 ))}
-              </ul>
+              </div>
+
               <button
-  style={{ backgroundColor: program.accentColor, color: '#EDE8D5' }}
-  className="py-4 px-8 font-bold rounded tracking-wide hover:opacity-90 transition w-fit"
-  onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
->
-  Request Info
-</button>
+                style={{ backgroundColor: program.accentColor, color: '#EDE8D5' }}
+                className="py-4 px-8 font-bold rounded tracking-wide hover:opacity-90 transition w-fit"
+                onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+              >
+                Reserve Your Spot
+              </button>
             </div>
           </div>
         ))}
