@@ -48,69 +48,71 @@ function About() {
           </button>
         </div>
 
-        <div className="flex-1 relative" style={{ height: '520px' }}>
+        <div className="flex-1 relative hidden md:block" style={{ height: '520px' }}>
+  <img
+    src={esfaceWorkout}
+    alt="Coach Jon training"
+    className="absolute object-cover object-top rounded-md"
+    style={{
+      width: '58%',
+      height: '340px',
+      top: '0px',
+      left: '0px',
+      transform: 'rotate(-2deg)',
+      zIndex: 2,
+      boxShadow: '4px 4px 16px rgba(0,0,0,0.18)',
+    }}
+  />
+  <img
+    src={kingsDribbling}
+    alt="Kings Academy"
+    className="absolute object-cover object-top rounded-md"
+    style={{
+      width: '50%',
+      height: '300px',
+      top: '20px',
+      right: '0px',
+      transform: 'rotate(2.5deg)',
+      zIndex: 1,
+      boxShadow: '4px 4px 16px rgba(0,0,0,0.18)',
+    }}
+  />
+  <img
+    src={ucMerced}
+    alt="UC Merced"
+    className="absolute object-cover rounded-md"
+    style={{
+      width: '48%',
+      height: '240px',
+      bottom: '0px',
+      left: '10px',
+      transform: 'rotate(1.5deg)',
+      zIndex: 3,
+      boxShadow: '4px 4px 16px rgba(0,0,0,0.18)',
+    }}
+  />
+  <img
+    src={sectionChamp}
+    alt="Section Championship"
+    className="absolute object-cover object-top rounded-md"
+    style={{
+      width: '50%',
+      height: '220px',
+      bottom: '10px',
+      right: '0px',
+      transform: 'rotate(-1.5deg)',
+      zIndex: 4,
+      boxShadow: '4px 4px 16px rgba(0,0,0,0.18)',
+    }}
+  />
+</div>
 
-          <img
-            src={esfaceWorkout}
-            alt="Coach Jon training"
-            className="absolute object-cover object-top rounded-md"
-            style={{
-              width: '58%',
-              height: '340px',
-              top: '0px',
-              left: '0px',
-              transform: 'rotate(-2deg)',
-              zIndex: 2,
-              boxShadow: '4px 4px 16px rgba(0,0,0,0.18)',
-            }}
-          />
-
-          <img
-            src={kingsDribbling}
-            alt="King's Academy"
-            className="absolute object-cover object-top rounded-md"
-            style={{
-              width: '50%',
-              height: '300px',
-              top: '20px',
-              right: '0px',
-              transform: 'rotate(2.5deg)',
-              zIndex: 1,
-              boxShadow: '4px 4px 16px rgba(0,0,0,0.18)',
-            }}
-          />
-
-          <img
-            src={ucMerced}
-            alt="UC Merced"
-            className="absolute object-cover rounded-md"
-            style={{
-              width: '48%',
-              height: '240px',
-              bottom: '0px',
-              left: '10px',
-              transform: 'rotate(1.5deg)',
-              zIndex: 3,
-              boxShadow: '4px 4px 16px rgba(0,0,0,0.18)',
-            }}
-          />
-
-          <img
-            src={sectionChamp}
-            alt="Section Championship"
-            className="absolute object-cover object-top rounded-md"
-            style={{
-              width: '50%',
-              height: '220px',
-              bottom: '10px',
-              right: '0px',
-              transform: 'rotate(-1.5deg)',
-              zIndex: 4,
-              boxShadow: '4px 4px 16px rgba(0,0,0,0.18)',
-            }}
-          />
-
-        </div>
+<div className="flex-1 grid grid-cols-2 gap-3 md:hidden">
+  <img src={esfaceWorkout} alt="Coach Jon training" className="w-full object-cover object-top rounded-md" style={{ height: '180px' }} />
+  <img src={kingsDribbling} alt="Kings Academy" className="w-full object-cover object-top rounded-md" style={{ height: '180px' }} />
+  <img src={ucMerced} alt="UC Merced" className="w-full object-cover rounded-md" style={{ height: '180px' }} />
+  <img src={sectionChamp} alt="Section Championship" className="w-full object-cover object-top rounded-md" style={{ height: '180px' }} />
+</div>
       </div>
     </section>
   )

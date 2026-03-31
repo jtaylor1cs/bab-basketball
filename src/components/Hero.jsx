@@ -52,20 +52,22 @@ function Hero() {
         </p>
   
         <div className="flex gap-4">
-        <button
-  style={{ backgroundColor: '#B94B35', color: '#EDE8D5' }}
-  className="px-10 py-4 text-lg font-bold tracking-wide rounded hover:opacity-90 transition"
-  onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
->
-  Book a Session
-</button>
-<button
-  style={{ border: '2px solid #2C1A0E', color: '#2C1A0E', backgroundColor: 'transparent' }}
-  className="px-10 py-4 text-lg font-bold tracking-wide rounded hover:opacity-90 transition"
-  onClick={() => document.getElementById('programs').scrollIntoView({ behavior: 'smooth' })}
->
-  Learn More
-</button>
+        <div className="flex flex-col sm:flex-row gap-4">
+  <button
+    style={{ backgroundColor: '#B94B35', color: '#EDE8D5' }}
+    className="px-10 py-4 text-lg font-bold tracking-wide rounded hover:opacity-90 transition"
+    onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+  >
+    Book a Session
+  </button>
+  <button
+    style={{ border: '2px solid #2C1A0E', color: '#2C1A0E', backgroundColor: 'transparent' }}
+    className="px-10 py-4 text-lg font-bold tracking-wide rounded hover:opacity-90 transition"
+    onClick={() => document.getElementById('programs').scrollIntoView({ behavior: 'smooth' })}
+  >
+    Learn More
+  </button>
+</div>
         </div>
       </section>
     )
