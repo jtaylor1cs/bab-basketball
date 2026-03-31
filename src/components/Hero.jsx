@@ -36,7 +36,7 @@ function Hero() {
             backgroundColor: '#2D6A5A',
             letterSpacing: '0.2em',
           }}
-          className="text-xs font-bold uppercase px-4 py-2 rounded mb-6"
+          className="text-s font-bold uppercase px-8 py-4 rounded mb-6"
         >
           Bay Area Basketball
         </p>
