@@ -19,19 +19,13 @@ function About() {
           </div>
 
           <p style={{ color: '#2C1A0E' }} className="leading-relaxed text-lg opacity-80">
-            I'm Coach Jon — I grew up in the Bay Area playing basketball and
-            it's been a huge part of my life ever since. Playing high school ball at King's Academy
-            I was part of the program's first-ever section championship, and I finished as the
-            all-time leader in points and triple doubles, earning All-League
-            three times along the way.
+          I'm Coach Jon — 5 years of coaching experience, a commissioner-level camp coach at Team Esface, and a current Division I captain at UC Merced. I've trained hundreds of young players and I know how to meet kids where they are and push them to the next level.
+
           </p>
 
           <p style={{ color: '#2C1A0E' }} className="leading-relaxed text-lg opacity-80">
-            Now I'm a starting point guard and captain at UC Merced, leading
-            the team in assists and averaging 30+ minutes a game.  
-            I spent five years coaching at Team Esface camps, working my way
-            up to commissioner-level coach, so I've been on both sides of
-            the gym floor for a while now.
+          As a player, I grew up right here in the Bay Area. At King's Academy I led the program to its first section championship and finished as the all-time leader in points and triple doubles. Now I start at point guard for UC Merced, leading the team in assists.
+
           </p>
 
           <p style={{ color: '#2C1A0E' }} className="leading-relaxed text-lg opacity-80">
