@@ -10,10 +10,16 @@ function Hero() {
       className="flex flex-col items-center justify-center text-center px-8 relative overflow-hidden"
     >
       <img
-        src={bgSilhouettes}
+        src={bgRetroball}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        style={{ opacity: 0.4 }}
+        className="absolute pointer-events-none"
+        style={{
+          width: '500px',
+          top: '-60px',
+          right: '-60px',
+          opacity: 0.5,
+          zIndex: 1,
+        }}
       />
 
       <img
@@ -21,23 +27,26 @@ function Hero() {
         alt=""
         className="absolute pointer-events-none"
         style={{
-          width: '340px',
-          bottom: '-20px',
-          left: '-40px',
+          width: '500px',
+          bottom: '-40px',
+          left: '-60px',
           opacity: 0.5,
           transform: 'rotate(-10deg)',
+          zIndex: 1,
         }}
       />
 
       <img
-        src={bgRetroball}
+        src={bgSilhouettes}
         alt=""
         className="absolute pointer-events-none"
         style={{
-          width: '280px',
-          top: '-40px',
-          right: '-40px',
-          opacity: 0.5,
+          width: '65%',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%) rotate(30deg)',
+          opacity: 0.35,
+          zIndex: 2,
         }}
       />
 
@@ -51,10 +60,11 @@ function Hero() {
           style={{
             color: '#EDE8D5',
             backgroundColor: '#2D6A5A',
-            letterSpacing: '0.2em',
-            fontFamily: 'DM Sans, sans-serif',
+            letterSpacing: '0.25em',
+            fontFamily: 'Alfa Slab One, serif',
+            fontSize: 'clamp(1.2rem, 3.5vw, 2.2rem)',
           }}
-          className="text-xs font-bold uppercase px-4 py-2 rounded mb-6 inline-block"
+          className="uppercase px-6 py-3 rounded mb-6 inline-block"
         >
           Bay Area Basketball Training
         </p>
@@ -64,9 +74,9 @@ function Hero() {
             color: '#2C1A0E',
             fontFamily: 'Alfa Slab One, serif',
             lineHeight: '1.1',
-            fontSize: 'clamp(3rem, 8vw, 7rem)',
+            fontSize: 'clamp(2rem, 5vw, 4rem)',
           }}
-          className="mb-4"
+          className="mb-2"
         >
           TRAIN HARD.
         </h1>
@@ -75,7 +85,7 @@ function Hero() {
             color: '#B94B35',
             fontFamily: 'Alfa Slab One, serif',
             lineHeight: '1.1',
-            fontSize: 'clamp(3rem, 8vw, 7rem)',
+            fontSize: 'clamp(2rem, 5vw, 4rem)',
           }}
           className="mb-8"
         >

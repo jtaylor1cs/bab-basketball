@@ -19,7 +19,7 @@ function About() {
           </div>
 
           <p style={{ color: '#2C1A0E' }} className="leading-relaxed text-lg opacity-80">
-          I'm Coach Jon — 5 years of coaching experience, a commissioner-level camp coach at Team Esface, and a current captain at UC Merced, where I'm a senior studying Computer Science and Engineering.. I've trained hundreds of young players and I know how to meet kids where they are and push them to the next level.
+          I'm Coach Jon Taylor — 5 years of coaching experience, a commissioner-level camp coach at Team Esface, and a current captain at UC Merced, where I'm a senior studying Computer Science and Engineering. I've trained hundreds of young players and I know how to meet kids where they are and push them to the next level.
 
           </p>
 
