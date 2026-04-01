@@ -16,10 +16,10 @@ function Navbar() {
     >
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <img src={logo} alt="BAB Training Logo" style={{ height: '60px', width: 'auto' }} />
-          <h1 style={{ color: '#2C1A0E' }} className="text-2xl font-bold tracking-wide">
+          <img src={logo} alt="BAB Training Logo" style={{ height: '100px', width: 'auto' }} />
+          {/* <h1 style={{ color: '#2C1A0E' }} className="text-2xl font-bold tracking-wide">
             BAB <span style={{ color: '#B94B35' }}>Training</span>
-          </h1>
+          </h1> */}
         </div>
 
         <ul style={{ color: '#2C1A0E' }} className="hidden md:flex items-center gap-8 list-none text-lg font-bold tracking-wide m-0 p-0">
