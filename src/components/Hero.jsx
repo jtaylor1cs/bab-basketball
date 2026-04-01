@@ -1,109 +1,111 @@
-import heroImage from '../assets/Esfaceworkout.jpg'
+import bgXando from '../assets/bg_xando.png'
+import bgRetroball from '../assets/bg_retroball.png'
+import bgSilhouettes from '../assets/bg_silhouettes.png'
 
 function Hero() {
   return (
     <section
       id="hero"
       style={{ backgroundColor: '#F5EFE0', minHeight: '90vh' }}
-      className="flex flex-col md:flex-row items-stretch"
+      className="flex flex-col items-center justify-center text-center px-8 relative overflow-hidden"
     >
-      <div className="flex-1 flex flex-col justify-center px-10 md:px-16 py-20 md:py-0">
+      <img
+        src={bgSilhouettes}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        style={{ opacity: 0.4 }}
+      />
+
+      <img
+        src={bgXando}
+        alt=""
+        className="absolute pointer-events-none"
+        style={{
+          width: '340px',
+          bottom: '-20px',
+          left: '-40px',
+          opacity: 0.5,
+          transform: 'rotate(-10deg)',
+        }}
+      />
+
+      <img
+        src={bgRetroball}
+        alt=""
+        className="absolute pointer-events-none"
+        style={{
+          width: '280px',
+          top: '-40px',
+          right: '-40px',
+          opacity: 0.5,
+        }}
+      />
+
+      <div className="relative" style={{ zIndex: 10 }}>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+
         <p
           style={{
-            fontFamily: "'Bebas Neue', cursive",
             color: '#EDE8D5',
             backgroundColor: '#2D6A5A',
-            letterSpacing: '0.25em',
-            fontSize: '1.3rem',
-            display: 'inline-block',
+            letterSpacing: '0.2em',
+            fontFamily: 'DM Sans, sans-serif',
           }}
-          className="px-5 py-2 rounded mb-6 w-fit text-2xl"
+          className="text-xs font-bold uppercase px-4 py-2 rounded mb-6 inline-block"
         >
-          Bay Area Basketball
+          Bay Area Basketball Training
         </p>
 
         <h1
-          style={{ color: '#2C1A0E', lineHeight: '1.1' }}
-          className="text-6xl md:text-7xl font-bold mb-6"
+          style={{
+            color: '#2C1A0E',
+            fontFamily: 'Alfa Slab One, serif',
+            lineHeight: '1.1',
+            fontSize: 'clamp(3rem, 8vw, 7rem)',
+          }}
+          className="mb-4"
         >
-          Train Hard. <br />
-          <span style={{ color: '#B94B35' }}>Play Harder.</span>
+          TRAIN HARD.
+        </h1>
+        <h1
+          style={{
+            color: '#B94B35',
+            fontFamily: 'Alfa Slab One, serif',
+            lineHeight: '1.1',
+            fontSize: 'clamp(3rem, 8vw, 7rem)',
+          }}
+          className="mb-8"
+        >
+          PLAY HARDER.
         </h1>
 
-        <p style={{ color: '#2C1A0E' }} className="text-xl max-w-lg mb-10 opacity-60">
-          Elite basketball training for grades K-12 in the Bay Area.
+        <p
+          style={{ color: '#2C1A0E', fontFamily: 'DM Sans, sans-serif' }}
+          className="text-xl max-w-xl mb-10 opacity-60 mx-auto"
+        >
+          Elite basketball training for grades 1-12 in the Bay Area.
           Built to develop skills, confidence, and compete at the next level.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
-            style={{ backgroundColor: '#B94B35', color: '#EDE8D5' }}
+            style={{ backgroundColor: '#B94B35', color: '#EDE8D5', fontFamily: 'DM Sans, sans-serif' }}
             className="px-10 py-4 text-lg font-bold tracking-wide rounded hover:opacity-90 transition"
             onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
           >
             Book a Session
           </button>
           <button
-            style={{ border: '2px solid #2C1A0E', color: '#2C1A0E', backgroundColor: 'transparent' }}
+            style={{ border: '2px solid #2C1A0E', color: '#2C1A0E', backgroundColor: 'transparent', fontFamily: 'DM Sans, sans-serif' }}
             className="px-10 py-4 text-lg font-bold tracking-wide rounded hover:opacity-90 transition"
             onClick={() => document.getElementById('programs').scrollIntoView({ behavior: 'smooth' })}
           >
             Learn More
           </button>
         </div>
-      </div>
-
-      <div
-        className="flex-1 relative hidden md:block"
-        style={{ minHeight: '500px' }}
-      >
-        <img
-          src={heroImage}
-          alt="Coach Jon Taylor training"
-          className="absolute inset-0 w-full h-full object-cover object-top"
-        />
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'linear-gradient(to right, #F5EFE0 0%, transparent 20%)',
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '32px',
-            left: '32px',
-            backgroundColor: '#C49A2D',
-            color: '#2C1A0E',
-            padding: '10px 18px',
-            borderRadius: '6px',
-            fontWeight: 'bold',
-            fontSize: '0.85rem',
-            letterSpacing: '0.1em',
-            textTransform: 'uppercase',
-          }}
-        >
-          UC Merced Starting PG
-        </div>
-      </div>
-
-      <div
-        className="md:hidden w-full relative"
-        style={{ height: '280px' }}
-      >
-        <img
-          src={heroImage}
-          alt="Coach Jon Taylor training"
-          className="absolute inset-0 w-full h-full object-cover object-top"
-        />
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'linear-gradient(to bottom, #F5EFE0 0%, transparent 30%)',
-          }}
-        />
       </div>
     </section>
   )
