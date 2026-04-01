@@ -42,8 +42,8 @@ function Hero() {
         className="absolute pointer-events-none"
         style={{
           width: '85%',
-          top: '60%',
-          left: '60%',
+          top: '50%',
+          left: '50%',
           transform: 'translate(-50%, -50%) rotate(30deg)',
           opacity: 0.35,
           zIndex: 2,
