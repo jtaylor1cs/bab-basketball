@@ -55,6 +55,10 @@ function Hero() {
   href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Boogaloo&family=DM+Sans:wght@400;700&display=swap"
   rel="stylesheet"
 />
+<link
+          href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
 
         <p
           style={{
