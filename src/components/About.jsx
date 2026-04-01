@@ -19,7 +19,7 @@ function About() {
           </div>
 
           <p style={{ color: '#2C1A0E' }} className="leading-relaxed text-lg opacity-80">
-          I'm Coach Jon — 5 years of coaching experience, a commissioner-level camp coach at Team Esface, and a current Division I captain at UC Merced. I've trained hundreds of young players and I know how to meet kids where they are and push them to the next level.
+          I'm Coach Jon — 5 years of coaching experience, a commissioner-level camp coach at Team Esface, and a current captain at UC Merced. I've trained hundreds of young players and I know how to meet kids where they are and push them to the next level.
 
           </p>
 
@@ -39,7 +39,7 @@ function About() {
   className="py-3 px-8 font-bold rounded tracking-wide hover:opacity-90 transition w-fit"
   onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
 >
-  Work With Me
+  Start Training
 </button>
         </div>
 
