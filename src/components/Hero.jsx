@@ -27,7 +27,7 @@ function Hero() {
   alt=""
   className="absolute pointer-events-none hidden md:block"
   style={{
-    width: '500px',
+    width: '700px',
     bottom: '-40px',
     left: '-60px',
     opacity: 0.5,
