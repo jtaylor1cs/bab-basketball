@@ -22,39 +22,39 @@ function Hero() {
         }}
       />
 
-      <img
-        src={bgXando}
-        alt=""
-        className="absolute pointer-events-none"
-        style={{
-          width: '800px',
-          bottom: '-40px',
-          left: '-60px',
-          opacity: 0.5,
-          transform: 'rotate(-10deg)',
-          zIndex: 1,
-        }}
-      />
+<img
+  src={bgXando}
+  alt=""
+  className="absolute pointer-events-none hidden md:block"
+  style={{
+    width: '500px',
+    bottom: '-40px',
+    left: '-60px',
+    opacity: 0.5,
+    transform: 'rotate(-10deg)',
+    zIndex: 1,
+  }}
+/>
 
-      <img
-        src={bgSilhouettes}
-        alt=""
-        className="absolute pointer-events-none"
-        style={{
-          width: '95%',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%) rotate(30deg)',
-          opacity: 0.35,
-          zIndex: 2,
-        }}
-      />
+<img
+  src={bgSilhouettes}
+  alt=""
+  className="absolute pointer-events-none hidden md:block"
+  style={{
+    width: '65%',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%) rotate(30deg)',
+    opacity: 0.35,
+    zIndex: 2,
+  }}
+/>
 
       <div className="relative" style={{ zIndex: 10 }}>
         <link
-          href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
+  href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Boogaloo&family=DM+Sans:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
 
         <p
           style={{
@@ -70,27 +70,27 @@ function Hero() {
         </p>
 
         <h1
-          style={{
-            color: '#2C1A0E',
-            fontFamily: 'Alfa Slab One, serif',
-            lineHeight: '1.1',
-            fontSize: 'clamp(2rem, 5vw, 4rem)',
-          }}
-          className="mb-2"
-        >
-          TRAIN HARD.
-        </h1>
-        <h1
-          style={{
-            color: '#B94B35',
-            fontFamily: 'Alfa Slab One, serif',
-            lineHeight: '1.1',
-            fontSize: 'clamp(2rem, 5vw, 4rem)',
-          }}
-          className="mb-8"
-        >
-          PLAY HARDER.
-        </h1>
+  style={{
+    color: '#2C1A0E',
+    fontFamily: 'Boogaloo, cursive',
+    lineHeight: '1.1',
+    fontSize: 'clamp(2rem, 5vw, 4rem)',
+  }}
+  className="mb-2"
+>
+  TRAIN HARD.
+</h1>
+<h1
+  style={{
+    color: '#B94B35',
+    fontFamily: 'Boogaloo, cursive',
+    lineHeight: '1.1',
+    fontSize: 'clamp(2rem, 5vw, 4rem)',
+  }}
+  className="mb-8"
+>
+  PLAY HARDER.
+</h1>
 
         <p
           style={{ color: '#2C1A0E', fontFamily: 'DM Sans, sans-serif' }}
