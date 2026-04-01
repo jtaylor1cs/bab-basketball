@@ -14,7 +14,7 @@ function Hero() {
         alt=""
         className="absolute pointer-events-none"
         style={{
-          width: '500px',
+          width: '600px',
           top: '-60px',
           right: '-60px',
           opacity: 0.5,
@@ -27,7 +27,7 @@ function Hero() {
         alt=""
         className="absolute pointer-events-none"
         style={{
-          width: '500px',
+          width: '800px',
           bottom: '-40px',
           left: '-60px',
           opacity: 0.5,
@@ -41,9 +41,9 @@ function Hero() {
         alt=""
         className="absolute pointer-events-none"
         style={{
-          width: '65%',
-          top: '50%',
-          left: '50%',
+          width: '85%',
+          top: '60%',
+          left: '60%',
           transform: 'translate(-50%, -50%) rotate(30deg)',
           opacity: 0.35,
           zIndex: 2,
