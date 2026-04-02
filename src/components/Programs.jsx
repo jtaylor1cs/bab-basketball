@@ -10,7 +10,7 @@ const programs = [
     description: 'Building the foundation the right way. We focus on fundamentals, coordination, ball handling, footwork, and keeping the game fun with competitive drills and games.',
     options: [
       { type: 'Group Sessions', detail: '4-8 players', price: '$50 / player' },
-      { type: '1-on-1 Training', detail: 'Private session', price: '$90 / session' },
+      { type: '1-on-1 Training', detail: 'Private session', price: '$80 / session' },
     ],
     bundle: { label: '8-Session Package', savings: 'SAVE 15%', groupPrice: '$340', oneOnOnePrice: '$544' },
     accentColor: '#B94B35',
@@ -25,7 +25,7 @@ const programs = [
     description: 'Training built for players who want to compete at the next level. Advanced ball handling, shooting mechanics, game IQ, and position-specific work at game speed.',
     options: [
       { type: 'Group Sessions', detail: '4-8 players', price: '$50 / player' },
-      { type: '1-on-1 Training', detail: 'Private session', price: '$90 / session' },
+      { type: '1-on-1 Training', detail: 'Private session', price: '$80 / session' },
     ],
     bundle: { label: '8-Session Package', savings: 'SAVE 15%', groupPrice: '$340', oneOnOnePrice: '$544' },
     accentColor: '#4A7FA5',
