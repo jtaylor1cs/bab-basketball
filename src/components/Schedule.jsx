@@ -39,29 +39,23 @@ function Schedule() {
               </div>
   
               <div className="px-8 py-6 flex flex-col gap-4">
-                <div
-                  style={{ borderBottom: '1px solid #2C1A0E', paddingBottom: '16px' }}
-                  className="flex justify-between items-center"
-                >
-                  <div>
-                    <p style={{ color: '#2C1A0E' }} className="font-bold text-lg">Junior Ballers</p>
-                    <p style={{ color: '#2C1A0E' }} className="text-sm opacity-50">Grades 1-5</p>
-                  </div>
-                  <div style={{ backgroundColor: '#EDE8D5', border: '2px solid #2C1A0E', borderRadius: '8px' }} className="px-4 py-2 text-right">
-                    <p style={{ color: '#2C1A0E' }} className="font-bold">5:00 - 5:50 PM</p>
-                  </div>
-                </div>
-  
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p style={{ color: '#2C1A0E' }} className="font-bold text-lg">Varsity Prep</p>
-                    <p style={{ color: '#2C1A0E' }} className="text-sm opacity-50">Grades 6-12</p>
-                  </div>
-                  <div style={{ backgroundColor: '#EDE8D5', border: '2px solid #2C1A0E', borderRadius: '8px' }} className="px-4 py-2 text-right">
-                    <p style={{ color: '#2C1A0E' }} className="font-bold">6:00 - 6:50 PM</p>
-                  </div>
-                </div>
-              </div>
+  {[
+    { title: 'Junior Ballers', grades: 'Grades 1-5', time: '5:00 PM' },
+    { title: 'Varsity Prep', grades: 'Grades 6-12', time: '6:00 PM' },
+  ].map((item) => (
+    <div
+      key={item.title}
+      style={{ border: '2px solid #2C1A0E', borderRadius: '8px' }}
+      className="flex justify-between items-center px-5 py-3"
+    >
+      <div>
+        <p style={{ color: '#2C1A0E' }} className="font-bold">{item.title}</p>
+        <p style={{ color: '#2C1A0E' }} className="text-sm opacity-50">{item.grades}</p>
+      </div>
+      <p style={{ color: '#2C1A0E' }} className="font-bold">{item.time}</p>
+    </div>
+  ))}
+</div>
             </div>
   
             <div
@@ -86,32 +80,18 @@ function Schedule() {
               </div>
   
               <div className="px-8 py-6 flex flex-col gap-4">
-                <p style={{ color: '#2C1A0E' }} className="font-bold text-lg">1-on-1 Training</p>
-                <p style={{ color: '#2C1A0E' }} className="text-sm opacity-50 -mt-3">Grades 1-12 - Available slots:</p>
-  
-                {['5:00 PM', '6:00 PM', '7:00 PM'].map((time) => (
-                  <div
-                    key={time}
-                    style={{ border: '2px solid #2C1A0E', borderRadius: '8px' }}
-                    className="flex justify-between items-center px-5 py-3"
-                  >
-                    <p style={{ color: '#2C1A0E' }} className="font-bold">{time}</p>
-                    <span
-                      style={{
-                        backgroundColor: '#2D6A5A',
-                        color: '#EDE8D5',
-                        fontSize: '11px',
-                        fontWeight: 'bold',
-                        padding: '3px 10px',
-                        borderRadius: '4px',
-                        letterSpacing: '0.1em',
-                      }}
-                    >
-                      AVAILABLE
-                    </span>
-                  </div>
-                ))}
-              </div>
+  <p style={{ color: '#2C1A0E' }} className="font-bold text-lg">1-on-1 Training</p>
+  <p style={{ color: '#2C1A0E' }} className="text-sm opacity-50 -mt-3">Grades 1-12</p>
+  {['5:00 PM', '6:00 PM', '7:00 PM'].map((time) => (
+    <div
+      key={time}
+      style={{ border: '2px solid #2C1A0E', borderRadius: '8px' }}
+      className="flex justify-between items-center px-5 py-3"
+    >
+      <p style={{ color: '#2C1A0E' }} className="font-bold">{time}</p>
+    </div>
+  ))}
+</div>
             </div>
   
             <div
