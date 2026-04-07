@@ -26,6 +26,7 @@ function Navbar() {
           <li className="cursor-pointer hover:opacity-60 transition" onClick={() => scrollTo('hero')}>Home</li>
           <li className="cursor-pointer hover:opacity-60 transition" onClick={() => scrollTo('programs')}>Programs</li>
           <li className="cursor-pointer hover:opacity-60 transition" onClick={() => scrollTo('about')}>About</li>
+          <li className="cursor-pointer hover:opacity-60 transition" onClick={() => scrollTo('schedule')}>Schedule</li>
           <li
             style={{ backgroundColor: '#B94B35', color: '#EDE8D5' }}
             className="cursor-pointer px-5 py-2 rounded hover:opacity-90 transition"
