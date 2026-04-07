@@ -50,16 +50,16 @@ function Programs() {
         </p>
 
         <div
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            backgroundColor: '#EDE8D5',
-            border: '2px solid #2C1A0E',
-            borderRadius: '999px',
-            padding: '8px 20px',
-            marginBottom: '12px',
-          }}
+          // style={{
+          //   display: 'inline-flex',
+          //   alignItems: 'center',
+          //   gap: '8px',
+          //   backgroundColor: '#EDE8D5',
+          //   border: '2px solid #2C1A0E',
+          //   borderRadius: '999px',
+          //   padding: '8px 20px',
+          //   marginBottom: '12px',
+          // }}
         >
           {/* <span style={{ color: '#2C1A0E' }} className="text-sm font-bold">50 min sessions</span>
           <span style={{ color: '#2C1A0E', opacity: 0.3 }}>·</span>
