@@ -61,9 +61,9 @@ function Programs() {
             marginBottom: '12px',
           }}
         >
-          <span style={{ color: '#2C1A0E' }} className="text-sm font-bold">50 min sessions</span>
+          {/* <span style={{ color: '#2C1A0E' }} className="text-sm font-bold">50 min sessions</span>
           <span style={{ color: '#2C1A0E', opacity: 0.3 }}>·</span>
-          <span style={{ color: '#2C1A0E' }} className="text-sm font-bold">Evenings in Sunnyvale</span>
+          <span style={{ color: '#2C1A0E' }} className="text-sm font-bold">Evenings in Sunnyvale</span> */}
         </div>
 
         <p style={{ color: '#2C1A0E' }} className="text-xs opacity-40 max-w-lg mx-auto">

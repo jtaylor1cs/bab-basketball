@@ -40,7 +40,7 @@ function Schedule() {
   
               <div className="px-8 py-6 flex flex-col gap-4">
   {[
-    { title: 'Junior Ballers', grades: 'Grades 1-5', time: '5:00 PM' },
+    { title: 'Junior Ballers', grades: 'Grades K-5', time: '5:00 PM' },
     { title: 'Varsity Prep', grades: 'Grades 6-12', time: '6:00 PM' },
   ].map((item) => (
     <div
@@ -81,7 +81,7 @@ function Schedule() {
   
               <div className="px-8 py-6 flex flex-col gap-4">
   <p style={{ color: '#2C1A0E' }} className="font-bold text-lg">1-on-1 Training</p>
-  <p style={{ color: '#2C1A0E' }} className="text-sm opacity-50 -mt-3">Grades 1-12</p>
+  <p style={{ color: '#2C1A0E' }} className="text-sm opacity-50 -mt-3">Grades K-12</p>
   {['5:00 PM', '6:00 PM', '7:00 PM'].map((time) => (
     <div
       key={time}
