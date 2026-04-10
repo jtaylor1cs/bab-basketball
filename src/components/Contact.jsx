@@ -14,15 +14,12 @@ function Contact() {
               Ready to Level Up?
             </h2>
             <p style={{ color: '#2C1A0E' }} className="text-lg opacity-60">
-              Sign up below to reserve your spot. We'll confirm your schedule and send next steps within 24 hours.
+              Sign up below to reserve your spot. We will confirm your schedule and send next steps within 24 hours.
             </p>
           </div>
 
           <div className="flex flex-col gap-5 mt-4">
-            
-              href="mailto:jonbabtraining@gmail.com"
-              className="flex items-center gap-4 hover:opacity-70 transition"
-            >
+            <a href="mailto:jonbabtraining@gmail.com" className="flex items-center gap-4 hover:opacity-70 transition">
               <div
                 style={{ backgroundColor: '#B94B35', minWidth: '44px', height: '44px' }}
                 className="rounded-full flex items-center justify-center text-white font-bold text-sm"
@@ -35,10 +32,7 @@ function Contact() {
               </div>
             </a>
 
-            
-              href="tel:6504059522"
-              className="flex items-center gap-4 hover:opacity-70 transition"
-            >
+            <a href="tel:6504059522" className="flex items-center gap-4 hover:opacity-70 transition">
               <div
                 style={{ backgroundColor: '#2D6A5A', minWidth: '44px', height: '44px' }}
                 className="rounded-full flex items-center justify-center text-white font-bold text-sm"
@@ -51,12 +45,7 @@ function Contact() {
               </div>
             </a>
 
-            
-              href="https://instagram.com/babtraining"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-4 hover:opacity-70 transition"
-            >
+            <a href="https://instagram.com/babtraining" target="_blank" rel="noreferrer" className="flex items-center gap-4 hover:opacity-70 transition">
               <div
                 style={{ backgroundColor: '#C49A2D', minWidth: '44px', height: '44px' }}
                 className="rounded-full flex items-center justify-center text-white font-bold text-sm"
@@ -86,7 +75,7 @@ function Contact() {
                 Sign Up Form
               </h3>
               <p style={{ color: '#2C1A0E' }} className="opacity-60 leading-relaxed">
-                Our sign-up form covers player info, program selection, and liability waiver — all in one step.
+                Our sign-up form covers player info, program selection, and liability waiver in one step.
               </p>
             </div>
 
