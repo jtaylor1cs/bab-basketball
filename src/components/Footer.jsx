@@ -22,7 +22,7 @@ function Footer() {
               BAB Training
             </h3>
             <p style={{ color: '#EDE8D5' }} className="text-sm opacity-50">
-              Bay Area Basketball — Los Altos, CA
+              Bay Area Basketball — Sunnyvale, CA
             </p>
           </div>
         </div>

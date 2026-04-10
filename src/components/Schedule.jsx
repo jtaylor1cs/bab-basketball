@@ -96,13 +96,14 @@ function Schedule() {
         </div>
 
         <div className="text-center mt-10">
-          <button
-            style={{ backgroundColor: '#B94B35', color: '#EDE8D5' }}
-            className="px-10 py-4 text-lg font-bold rounded tracking-wide hover:opacity-90 transition"
-            onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-          >
-            Reserve Your Spot
-          </button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKpqHvbFJSxcsAB_Gy7gbuOX0s1uPLK3cVf9AkOC_SX9kyNQ/viewform?usp=publish-editor" target="_blank" rel="noreferrer">
+  <button
+    style={{ backgroundColor: '#B94B35', color: '#EDE8D5' }}
+    className="px-10 py-4 text-lg font-bold rounded tracking-wide hover:opacity-90 transition"
+  >
+    Reserve Your Spot
+  </button>
+</a>
         </div>
 
       </div>

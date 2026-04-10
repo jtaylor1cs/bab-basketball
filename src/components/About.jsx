@@ -32,13 +32,14 @@ function About() {
           I started BAB Training because great coaches changed my path, and I see that same potential in every kid who steps in the gym. Whether they're picking up a ball for the first time or chasing a varsity spot, my goal is to help them get closer to theirs.
           </p>
 
-          <button
-  style={{ backgroundColor: '#B94B35', color: '#EDE8D5' }}
-  className="py-3 px-8 font-bold rounded tracking-wide hover:opacity-90 transition w-fit"
-  onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
->
-  Start Training
-</button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKpqHvbFJSxcsAB_Gy7gbuOX0s1uPLK3cVf9AkOC_SX9kyNQ/viewform?usp=publish-editor" target="_blank" rel="noreferrer">
+  <button
+    style={{ backgroundColor: '#B94B35', color: '#EDE8D5' }}
+    className="py-3 px-8 font-bold rounded tracking-wide hover:opacity-90 transition w-fit"
+  >
+    Work With Me
+  </button>
+</a>
         </div>
 
         <div className="flex-1 relative hidden md:block" style={{ height: '520px' }}>

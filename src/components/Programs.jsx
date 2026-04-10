@@ -175,13 +175,14 @@ function Programs() {
                 </div>
               </div>
 
-              <button
-                style={{ backgroundColor: program.accentColor, color: '#EDE8D5' }}
-                className="py-4 px-8 font-bold rounded tracking-wide hover:opacity-90 transition w-fit"
-                onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-              >
-                Reserve Your Spot
-              </button>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKpqHvbFJSxcsAB_Gy7gbuOX0s1uPLK3cVf9AkOC_SX9kyNQ/viewform?usp=publish-editor" target="_blank" rel="noreferrer">
+  <button
+    style={{ backgroundColor: program.accentColor, color: '#EDE8D5' }}
+    className="py-4 px-8 font-bold rounded tracking-wide hover:opacity-90 transition w-fit"
+  >
+    Reserve Your Spot
+  </button>
+</a>
             </div>
           </div>
         ))}

@@ -1,7 +1,9 @@
+const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeKpqHvbFJSxcsAB_Gy7gbuOX0s1uPLK3cVf9AkOC_SX9kyNQ/viewform?usp=publish-editor"
+
 function Contact() {
   return (
-    <section id="contact" style={{ backgroundColor: '#F5EFE0' }}>
-      <div className="max-w-6xl mx-auto px-8 flex flex-col md:flex-row gap-16 py-32">
+    <section id="contact" style={{ backgroundColor: '#F5EFE0' }} className="py-32">
+      <div className="max-w-6xl mx-auto px-8 flex flex-col md:flex-row gap-16">
 
         <div className="flex-1 flex flex-col gap-6">
           <div>
@@ -12,14 +14,13 @@ function Contact() {
               Ready to Level Up?
             </h2>
             <p style={{ color: '#2C1A0E' }} className="text-lg opacity-60">
-              Reach out to ask about availability, programs, or anything else.
-              Sessions are filling up for summer!
+              Sign up below to reserve your spot. We'll confirm your schedule and send next steps within 24 hours.
             </p>
           </div>
 
           <div className="flex flex-col gap-5 mt-4">
             
-            <a  href="mailto:jonbabtraining@gmail.com"
+              href="mailto:jonbabtraining@gmail.com"
               className="flex items-center gap-4 hover:opacity-70 transition"
             >
               <div
@@ -35,7 +36,7 @@ function Contact() {
             </a>
 
             
-              <a href="tel:6504059522"
+              href="tel:6504059522"
               className="flex items-center gap-4 hover:opacity-70 transition"
             >
               <div
@@ -51,7 +52,7 @@ function Contact() {
             </a>
 
             
-            <a  href="https://instagram.com/bab.training"
+              href="https://instagram.com/babtraining"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-4 hover:opacity-70 transition"
@@ -64,110 +65,57 @@ function Contact() {
               </div>
               <div>
                 <p style={{ color: '#2C1A0E' }} className="font-bold">Instagram</p>
-                <p style={{ color: '#2C1A0E' }} className="opacity-60 text-sm">@bab.training</p>
+                <p style={{ color: '#2C1A0E' }} className="opacity-60 text-sm">@babtraining</p>
               </div>
             </a>
           </div>
         </div>
 
-        <div className="flex-1">
-          <form
-            action="https://formspree.io/f/xnjodrwy"
-            method="POST"
-            className="flex flex-col gap-4"
+        <div className="flex-1 flex flex-col justify-center">
+          <div
+            style={{
+              backgroundColor: '#EDE8D5',
+              border: '2px solid #2C1A0E',
+              borderRadius: '12px',
+              padding: '40px',
+            }}
+            className="flex flex-col gap-6"
           >
-            <div className="flex flex-col gap-1">
-              <label style={{ color: '#2C1A0E' }} className="text-sm font-bold tracking-wide">
-                Parent / Guardian Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                required
-                placeholder="John Smith"
-                style={{
-                  backgroundColor: '#EDE8D5',
-                  border: '2px solid #2C1A0E',
-                  color: '#2C1A0E',
-                  borderRadius: '6px',
-                  padding: '12px 16px',
-                  outline: 'none',
-                }}
-              />
+            <div>
+              <h3 style={{ color: '#2C1A0E' }} className="text-2xl font-bold mb-2">
+                Sign Up Form
+              </h3>
+              <p style={{ color: '#2C1A0E' }} className="opacity-60 leading-relaxed">
+                Our sign-up form covers player info, program selection, and liability waiver — all in one step.
+              </p>
             </div>
 
-            <div className="flex flex-col gap-1">
-              <label style={{ color: '#2C1A0E' }} className="text-sm font-bold tracking-wide">
-                Email Address
-              </label>
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="you@example.com"
-                style={{
-                  backgroundColor: '#EDE8D5',
-                  border: '2px solid #2C1A0E',
-                  color: '#2C1A0E',
-                  borderRadius: '6px',
-                  padding: '12px 16px',
-                  outline: 'none',
-                }}
-              />
-            </div>
+            <ul className="flex flex-col gap-3">
+              {[
+                'Player info and grade level',
+                'Program selection',
+                'Liability waiver',
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-3">
+                  <span style={{ color: '#B94B35', fontSize: '18px' }}>✓</span>
+                  <p style={{ color: '#2C1A0E' }} className="font-bold">{item}</p>
+                </li>
+              ))}
+            </ul>
 
-            <div className="flex flex-col gap-1">
-              <label style={{ color: '#2C1A0E' }} className="text-sm font-bold tracking-wide">
-                Program Interest
-              </label>
-              <select
-                name="program"
-                required
-                style={{
-                  backgroundColor: '#EDE8D5',
-                  border: '2px solid #2C1A0E',
-                  color: '#2C1A0E',
-                  borderRadius: '6px',
-                  padding: '12px 16px',
-                  outline: 'none',
-                }}
+            <a href={FORM_URL} target="_blank" rel="noreferrer">
+              <button
+                style={{ backgroundColor: '#B94B35', color: '#EDE8D5', width: '100%' }}
+                className="py-5 text-xl font-bold rounded tracking-wide hover:opacity-90 transition"
               >
-                <option value="">Select a program</option>
-                <option value="group">Group Sessions</option>
-                <option value="1on1">1-on-1 Training</option>
-                <option value="both">Not Sure Yet</option>
-              </select>
-            </div>
+                Sign Up Now
+              </button>
+            </a>
 
-            <div className="flex flex-col gap-1">
-              <label style={{ color: '#2C1A0E' }} className="text-sm font-bold tracking-wide">
-                Tell Me About Your Athlete
-              </label>
-              <textarea
-                name="message"
-                required
-                rows={4}
-                placeholder="Age, grade, experience level, goals..."
-                style={{
-                  backgroundColor: '#EDE8D5',
-                  border: '2px solid #2C1A0E',
-                  color: '#2C1A0E',
-                  borderRadius: '6px',
-                  padding: '12px 16px',
-                  outline: 'none',
-                  resize: 'vertical',
-                }}
-              />
-            </div>
-
-            <button
-              type="submit"
-              style={{ backgroundColor: '#B94B35', color: '#EDE8D5' }}
-              className="py-4 font-bold text-lg rounded tracking-wide hover:opacity-90 transition mt-2"
-            >
-              Send Message
-            </button>
-          </form>
+            <p style={{ color: '#2C1A0E' }} className="text-sm opacity-40 text-center">
+              Takes about 2 minutes to complete
+            </p>
+          </div>
         </div>
 
       </div>
