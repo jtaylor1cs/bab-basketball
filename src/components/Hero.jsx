@@ -100,7 +100,7 @@ function Hero() {
           style={{ color: '#2C1A0E', fontFamily: 'DM Sans, sans-serif' }}
           className="text-xl max-w-xl mb-10 opacity-60 mx-auto"
         >
-          Elite basketball training for grades K-12 in the Bay Area.
+          Elite basketball training for grades 1-12 in the Bay Area.
           Built to develop skills, confidence, and compete at the next level.
         </p>
 

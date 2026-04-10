@@ -6,7 +6,7 @@ const programs = [
     id: 1,
     tag: 'Ages 6-10',
     title: 'Junior Ballers',
-    grades: 'Grades K-5',
+    grades: 'Grades 1-5',
     description: 'Building the foundation the right way. We focus on fundamentals, coordination, ball handling, footwork, and keeping the game fun with competitive drills and games.',
     options: [
       { type: 'Group Sessions', detail: '4-8 players', price: '$50 / player' },
