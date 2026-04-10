@@ -19,19 +19,17 @@ function About() {
           </div>
 
           <p style={{ color: '#2C1A0E' }} className="leading-relaxed text-lg opacity-80">
-          I'm Coach Jon Taylor — 5 years of coaching experience, a commissioner-level camp coach at Team Esface, and a current captain at UC Merced, where I'm a senior studying Computer Science and Engineering. I've trained hundreds of young players and I know how to meet kids where they are and push them to the next level.
+          I'm Coach Jon Taylor — 5 years of coaching experience, a commissioner-level camp coach at Team Esface, and a current captain at UC Merced, where I'm a senior student-athlete studying Computer Science and Engineering. I've trained hundreds of young players and I know how to meet kids where they are and push them to the next level.
+          Growing up in the Bay Area, I led King's Academy to its first section championship and finished as the all-time leader in points and triple doubles. Now I start at point guard for UC Merced, leading the team in assists.
+          </p>
+
+          <p style={{ color: '#2C1A0E' }} className="leading-relaxed text-lg opacity-80">
+          I want to help build confident, competitive players. We work on mentality, game IQ, and holding yourself to a higher standard on and off the court.
 
           </p>
 
           <p style={{ color: '#2C1A0E' }} className="leading-relaxed text-lg opacity-80">
-          As a player, I grew up right here in the Bay Area. At King's Academy I led the program to its first section championship and finished as the all-time leader in points and triple doubles. Now I start at point guard for UC Merced, leading the team in assists.
-
-          </p>
-
-          <p style={{ color: '#2C1A0E' }} className="leading-relaxed text-lg opacity-80">
-            I started BAB Training because I genuinely love this game and
-            want to pass that on. Great coaches changed my path and I want
-            to be able to make an impact for the next generation of hoopers.
+          I started BAB Training because great coaches changed my path, and I see that same potential in every kid who steps in the gym. Whether they're picking up a ball for the first time or chasing a varsity spot, my goal is to help them get closer to theirs.
           </p>
 
           <button
