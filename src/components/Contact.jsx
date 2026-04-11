@@ -45,7 +45,7 @@ function Contact() {
               </div>
             </a>
 
-            <a href="https://instagram.com/babtraining" target="_blank" rel="noreferrer" className="flex items-center gap-4 hover:opacity-70 transition">
+            <a href="https://instagram.com/bab.training" target="_blank" rel="noreferrer" className="flex items-center gap-4 hover:opacity-70 transition">
               <div
                 style={{ backgroundColor: '#C49A2D', minWidth: '44px', height: '44px' }}
                 className="rounded-full flex items-center justify-center text-white font-bold text-sm"
@@ -54,7 +54,7 @@ function Contact() {
               </div>
               <div>
                 <p style={{ color: '#2C1A0E' }} className="font-bold">Instagram</p>
-                <p style={{ color: '#2C1A0E' }} className="opacity-60 text-sm">@babtraining</p>
+                <p style={{ color: '#2C1A0E' }} className="opacity-60 text-sm">@bab.training</p>
               </div>
             </a>
           </div>
