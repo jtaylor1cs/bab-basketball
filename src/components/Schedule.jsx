@@ -76,23 +76,26 @@ function Schedule() {
           </div>
 
           <div className="px-8 py-5">
-            {[
-              { label: 'Location', value: "King's Academy, Sunnyvale" },
-              { label: 'Session Length', value: '50 minutes' },
-              { label: 'Season', value: 'May 19 – Mid August' },
-              { label: 'Break Week', value: 'Week of June 2nd' },
-              { label: 'Group Size', value: '4-8 players max' },
-            ].map((item, i, arr) => (
-              <div
-                key={item.label}
-                style={{ borderBottom: i < arr.length - 1 ? '1px solid rgba(44,26,14,0.15)' : 'none' }}
-                className="flex justify-between items-center py-3"
-              >
-                <p style={{ color: '#2C1A0E' }} className="text-sm opacity-50 font-bold tracking-wide uppercase">{item.label}</p>
-                <p style={{ color: '#2C1A0E' }} className="font-bold">{item.value}</p>
-              </div>
-            ))}
-          </div>
+  {[
+    { label: 'Location', value: "King's Academy, Sunnyvale" },
+    { label: 'Session Length', value: '50 minutes' },
+    { label: 'Season', value: 'May 19 - Mid August' },
+    { label: 'Break Week', value: 'Week of June 2nd' },
+    { label: 'Group Size', value: '4-8 players max' },
+  ].map((item, i, arr) => (
+    <div
+      key={item.label}
+      style={{ borderBottom: i < arr.length - 1 ? '1px solid rgba(44,26,14,0.15)' : 'none' }}
+      className="flex justify-between items-center py-3"
+    >
+      <p style={{ color: '#2C1A0E' }} className="text-sm opacity-50 font-bold tracking-wide uppercase">{item.label}</p>
+      <p style={{ color: '#2C1A0E' }} className="font-bold">{item.value}</p>
+    </div>
+  ))}
+  <p style={{ color: '#2C1A0E' }} className="text-xs opacity-40 mt-3">
+    * Other days may be available on inquiry
+  </p>
+</div>
         </div>
 
         <div className="text-center mt-10">
