@@ -92,7 +92,7 @@ function Schedule() {
       <p style={{ color: '#2C1A0E' }} className="font-bold">{item.value}</p>
     </div>
   ))}
-  <p style={{ color: '#2C1A0E' }} className="text-s opacity-40 mt-3">
+  <p style={{ color: '#2C1A0E' }} className="text-s opacity-100 mt-3">
     * Other days may be available on inquiry
   </p>
 </div>
