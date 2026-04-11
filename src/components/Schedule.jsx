@@ -64,9 +64,7 @@ function Schedule() {
               Thursdays — Evenings
             </h3>
           </div>
-          <p style={{ color: '#2C1A0E' }} className="text-s opacity-100 mt-3">
-    * Other days may be available on inquiry
-  </p>
+          
           <div className="px-8 py-5" style={{ borderBottom: '2px solid #2C1A0E' }}>
             <div
               style={{ border: '2px solid #2C1A0E', borderRadius: '8px' }}
@@ -75,6 +73,9 @@ function Schedule() {
               <p style={{ color: '#2C1A0E' }} className="font-bold">1-on-1 Sessions</p>
               <p style={{ color: '#2C1A0E' }} className="text-sm opacity-50">Grades 1-12 · 3 slots per evening</p>
             </div>
+            <p style={{ color: '#2C1A0E' }} className="text-s opacity-100 mt-3">
+    * Other days may be available on inquiry
+  </p>
           </div>
 
 
