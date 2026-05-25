@@ -29,7 +29,7 @@ function Schedule() {
           >
             <div>
               <p style={{ color: '#EDE8D5' }} className="text-xs font-bold tracking-widest uppercase mb-1">
-                Group Training
+                Group or Private Training
               </p>
               <h3 style={{ color: '#EDE8D5' }} className="text-2xl font-bold">
                 Tuesdays — Evenings
