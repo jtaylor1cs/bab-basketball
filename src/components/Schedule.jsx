@@ -11,7 +11,7 @@ function Schedule() {
             Summer Schedule
           </h2>
           <p style={{ color: '#2C1A0E' }} className="text-lg opacity-50">
-            Summer sessions begin May 19th. No sessions the week of June 2nd.
+            Summer sessions run from May 19th to August 20th. No sessions the week of July 4th.
           </p>
         </div>
 
