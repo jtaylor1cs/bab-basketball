@@ -19,7 +19,7 @@ function About() {
           </div>
 
           <p style={{ color: '#2C1A0E' }} className="leading-relaxed text-lg opacity-80">
-          I'm Coach Jon Taylor. I have 5 years of coaching experience, have been a commissioner-level camp coach at Team Esface, and am a current team captain at UC Merced. I am a senior student-athlete studying Computer Science and Engineering. I've trained hundreds of young players and I know how to meet kids where they are and push them to the next level.
+          I'm Coach Jon Taylor. I have 5 years of coaching experience, have been a director-level camp coach at Team Esface, and am a current team captain at UC Merced. I am a senior student-athlete studying Computer Science and Engineering. I've trained hundreds of young players and I know how to meet kids where they are and push them to the next level.
           Growing up in the Bay Area, I led King's Academy to its first section championship and finished as the all-time leader in points and triple doubles. Now I am starting at point guard for UC Merced, leading the team in assists and steals.
           </p>
 

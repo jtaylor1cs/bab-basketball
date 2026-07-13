@@ -29,7 +29,7 @@ function Schedule() {
           >
             <div>
               <p style={{ color: '#EDE8D5' }} className="text-xs font-bold tracking-widest uppercase mb-1">
-                Group or Private Training
+                Small Group or Private Training
               </p>
               <h3 style={{ color: '#EDE8D5' }} className="text-2xl font-bold">
                 Tuesdays — Evenings
@@ -85,7 +85,7 @@ function Schedule() {
     { label: 'Session Length', value: '50 minutes' },
     { label: 'Season', value: 'May 19 - Mid August' },
     { label: 'Break Week', value: 'Week of June 2nd' },
-    { label: 'Group Size', value: '4-8 players max' },
+    { label: 'Group Size', value: '2-6 players max' },
   ].map((item, i, arr) => (
     <div
       key={item.label}
