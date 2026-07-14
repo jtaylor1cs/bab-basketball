@@ -83,7 +83,7 @@ function Schedule() {
   {[
     { label: 'Location', value: "King's Academy, Sunnyvale" },
     { label: 'Session Length', value: '50 minutes' },
-    { label: 'Season', value: 'May 19 - Mid August' },
+    { label: 'Season', value: 'May 19 - August 20th' },
     { label: 'Break Week', value: 'Week of June 2nd' },
     { label: 'Group Size', value: '2-6 players max' },
   ].map((item, i, arr) => (
