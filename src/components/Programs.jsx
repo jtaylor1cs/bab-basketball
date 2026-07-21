@@ -9,7 +9,7 @@ const programs = [
     grades: 'Grades 1-5',
     description: 'Building the foundation the right way. We focus on fundamentals, coordination, ball handling, footwork, and keeping the game fun with competitive drills and games.',
     options: [
-      { type: 'Small Group Sessions', detail: '2-6 players', price: '$64 / player' },
+      { type: 'Small Group Sessions', detail: '2-6 players', price: '$70 / player' },
       { type: '1-on-1 Training', detail: 'Private session', price: '$80 / session' },
     ],
     bundle: { label: '8-Session Package', savings: 'SAVE 15%', groupPrice: '$230', oneOnOnePrice: '$290' },
@@ -24,7 +24,7 @@ const programs = [
     grades: 'Grades 6-12',
     description: 'Training built for players who want to compete at the next level. Advanced ball handling, shooting mechanics, game IQ, and position-specific work at game speed.',
     options: [
-      { type: 'Small Group Sessions', detail: '2-6 players', price: '$64 / player' },
+      { type: 'Small Group Sessions', detail: '2-6 players', price: '$70 / player' },
       { type: '1-on-1 Training', detail: 'Private session', price: '$80 / session' },
     ],
     bundle: { label: '4-Session Package', savings: 'SAVE 10%', groupPrice: '$230', oneOnOnePrice: '$290' },

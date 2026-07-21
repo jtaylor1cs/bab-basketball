@@ -13,7 +13,7 @@ function App() {
         style={{ backgroundColor: '#2D6A5A', color: '#EDE8D5' }}
         className="text-center py-3 px-4 text-sm font-bold tracking-wide"
       >
-        Sign up to a small group session NOW and get 20% off your first session!{' '}
+        Sign up to a small group session NOW and get 10% off your first session!{' '}
         <span
           style={{ color: '#C49A2D', cursor: 'pointer', textDecoration: 'underline' }}
           onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}

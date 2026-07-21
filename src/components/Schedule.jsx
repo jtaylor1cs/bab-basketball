@@ -78,7 +78,6 @@ function Schedule() {
   </p>
           </div>
 
-
           <div className="px-8 py-5">
   {[
     { label: 'Location', value: "King's Academy, Sunnyvale" },
