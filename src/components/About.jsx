@@ -14,10 +14,10 @@ const badges = [
 ]
 
 const sidePhotos = [
-  { src: esfaceWorkout, alt: 'Coach Jon training', objectPosition: 'object-top', rotate: '-1.2deg', color: '#B94B35' },
-  { src: kingsDribbling, alt: 'Kings Academy', objectPosition: 'object-top', rotate: '1deg', color: '#4A7FA5' },
-  { src: ucMerced, alt: 'UC Merced', objectPosition: 'object-center', rotate: '-0.8deg', color: '#2D6A5A' },
-  { src: sectionChamp, alt: 'Section Championship', objectPosition: 'object-top', rotate: '1.2deg', color: '#C49A2D' },
+  { src: esfaceWorkout, alt: 'Coach Jon training', objectPosition: 'object-top', rotate: '-1.2deg', color: '#B94B35', height: '270px' },
+  { src: kingsDribbling, alt: 'Kings Academy', objectPosition: 'object-top', rotate: '1deg', color: '#4A7FA5', height: '270px' },
+  { src: ucMerced, alt: 'UC Merced', objectPosition: 'object-center', rotate: '-0.8deg', color: '#2D6A5A', height: '270px' },
+  { src: sectionChamp, alt: 'Section Championship', objectPosition: 'object-top', rotate: '1.2deg', color: '#C49A2D', height: '150px' },
 ]
 
 function About() {
@@ -73,12 +73,12 @@ function About() {
           </div>
         </Reveal>
 
-        <Reveal delay={150} className="hidden md:flex md:flex-col gap-4 shrink-0" style={{ width: '260px' }}>
+        <Reveal delay={150} className="hidden md:flex md:flex-col gap-4 shrink-0" style={{ width: '230px' }}>
           {sidePhotos.map((photo) => (
             <div
               key={photo.alt}
               className="overflow-hidden rounded-md hard-border hard-shadow-sm"
-              style={{ height: '150px', transform: `rotate(${photo.rotate})`, borderLeft: `5px solid ${photo.color}` }}
+              style={{ height: photo.height, transform: `rotate(${photo.rotate})`, borderLeft: `5px solid ${photo.color}` }}
             >
               <img src={photo.src} alt={photo.alt} className={`w-full h-full object-cover ${photo.objectPosition}`} />
             </div>

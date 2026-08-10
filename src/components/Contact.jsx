@@ -1,4 +1,4 @@
-import { IconBasketball, IconClipboard, IconStar } from './icons'
+import { IconWhistle, IconClipboard, IconStar, IconHoop } from './icons'
 import FrameCorners from './FrameCorners'
 import Reveal from './Reveal'
 
@@ -7,7 +7,7 @@ const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeKpqHvbFJSxcsAB_Gy7g
 function Contact() {
   return (
     <section id="contact" style={{ backgroundColor: '#F5EFE0' }} className="py-28 relative overflow-hidden">
-      <IconBasketball
+      <IconWhistle
         size={80}
         className="absolute pointer-events-none hidden md:block float-anim"
         style={{ color: '#2D6A5A', opacity: 0.15, top: '6%', right: '6%' }}
@@ -103,7 +103,7 @@ function Contact() {
               <ul className="flex flex-col gap-3">
                 {[
                   { icon: IconClipboard, label: 'Player info and grade level' },
-                  { icon: IconBasketball, label: 'Program selection' },
+                  { icon: IconHoop, label: 'Program selection' },
                   { icon: IconStar, label: 'Liability waiver' },
                 ].map((item) => (
                   <li key={item.label} className="flex items-center gap-3">

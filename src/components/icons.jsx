@@ -152,6 +152,36 @@ export function IconHome({ size = 24, className = '', style = {} }) {
   )
 }
 
+export function IconSneaker({ size = 24, className = '', style = {} }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} style={style}>
+      <path
+        d="M5 33c0-3 2-5 5-6l8-3c3-1 5-3 6-6l2-5c1-2 3-3 5-2l3 2c1 1 1 2 1 3v6c0 2 1 3 3 4l4 2c2 1 3 3 3 5v4c0 2-2 4-4 4H9c-2 0-4-2-4-4z"
+        stroke="currentColor"
+        strokeWidth="2.3"
+        strokeLinejoin="round"
+      />
+      <path d="M5 33h38" stroke="currentColor" strokeWidth="2.3" strokeLinecap="round" />
+      <path d="M14 23l4 4M20 20l3 4M26 17l3 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function IconJersey({ size = 24, className = '', style = {} }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} style={style}>
+      <path
+        d="M14 6L5 13l5 7 4-3v25h20V17l4 3 5-7-9-7c-2 3-5 5-10 5s-8-2-10-5z"
+        stroke="currentColor"
+        strokeWidth="2.4"
+        strokeLinejoin="round"
+        strokeLinecap="round"
+      />
+      <path d="M10 20v22M38 20v22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  )
+}
+
 export function IconCalendar({ size = 24, className = '', style = {} }) {
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} style={style}>

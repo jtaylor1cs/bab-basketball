@@ -1,22 +1,22 @@
-import { IconBasketball, IconChevronRow, IconStar, IconSwish } from './icons'
+import { IconBasketball, IconChevronRow, IconStar, IconSwish, IconSneaker, IconHoop, IconJersey, IconTrophy } from './icons'
 import PhotoTile from './PhotoTile'
 import Reveal from './Reveal'
 
 const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeKpqHvbFJSxcsAB_Gy7gbuOX0s1uPLK3cVf9AkOC_SX9kyNQ/viewform?usp=publish-editor'
 
 const chips = [
-  { label: 'Tue & Thu Sessions', color: '#2D6A5A' },
-  { label: '$70 Group · $90 1-on-1', color: '#B94B35' },
+  { label: 'Active College Player', color: '#2D6A5A' },
+  { label: 'Elite Skill Training', color: '#B94B35' },
   { label: '20+ Kids Trained', color: '#C49A2D' },
 ]
 
 // Drop action shots into public/gallery/ named hero-1.jpg ... hero-4.jpg
 // and they'll swap in here automatically — no code changes needed.
 const heroPhotos = [
-  { src: '/gallery/hero-1.jpg', color: '#B94B35', rotate: '-3deg', style: { position: 'absolute', width: '58%', height: '64%', top: '0%', left: '2%', zIndex: 2 } },
-  { src: '/gallery/hero-2.jpg', color: '#4A7FA5', rotate: '4deg', style: { position: 'absolute', width: '46%', height: '48%', top: '2%', right: '0%', zIndex: 1 } },
-  { src: '/gallery/hero-3.jpg', color: '#2D6A5A', rotate: '3deg', style: { position: 'absolute', width: '50%', height: '50%', bottom: '0%', left: '0%', zIndex: 3 } },
-  { src: '/gallery/hero-4.jpg', color: '#C49A2D', rotate: '-2deg', style: { position: 'absolute', width: '44%', height: '44%', bottom: '3%', right: '2%', zIndex: 4 } },
+  { src: '/gallery/hero-1.jpg', color: '#B94B35', rotate: '-3deg', icon: IconHoop, style: { position: 'absolute', width: '58%', height: '64%', top: '0%', left: '2%', zIndex: 2 } },
+  { src: '/gallery/hero-2.jpg', color: '#4A7FA5', rotate: '4deg', icon: IconStar, style: { position: 'absolute', width: '46%', height: '48%', top: '2%', right: '0%', zIndex: 1 } },
+  { src: '/gallery/hero-3.jpg', color: '#2D6A5A', rotate: '3deg', icon: IconSneaker, style: { position: 'absolute', width: '50%', height: '50%', bottom: '0%', left: '0%', zIndex: 3 } },
+  { src: '/gallery/hero-4.jpg', color: '#C49A2D', rotate: '-2deg', icon: IconJersey, style: { position: 'absolute', width: '44%', height: '44%', bottom: '3%', right: '2%', zIndex: 4 } },
 ]
 
 function Hero() {
@@ -124,12 +124,13 @@ function Hero() {
               src={photo.src}
               color={photo.color}
               rotate={photo.rotate}
+              icon={photo.icon}
               alt="Kid training in action with BAB Training"
               style={photo.style}
             />
           ))}
-          <IconBasketball
-            size={44}
+          <IconTrophy
+            size={40}
             className="absolute float-anim pointer-events-none"
             style={{ color: '#B94B35', top: '38%', left: '-6%', zIndex: 5, '--float-rot': '10deg' }}
           />

@@ -1,5 +1,5 @@
 import logo from '../assets/BABLogo.png'
-import { IconBasketball } from './icons'
+import { IconHoop } from './icons'
 
 const links = [
   { id: 'hero', label: 'Home' },
@@ -20,10 +20,10 @@ function Footer() {
       style={{ backgroundColor: '#2C1A0E', borderTop: '4px solid #C49A2D' }}
       className="px-6 md:px-8 py-10 relative overflow-hidden"
     >
-      <IconBasketball
+      <IconHoop
         size={140}
         className="absolute pointer-events-none hidden md:block"
-        style={{ color: '#EDE8D5', opacity: 0.04, top: '-30px', right: '-20px' }}
+        style={{ color: '#EDE8D5', opacity: 0.05, top: '-20px', right: '-20px' }}
       />
 
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 relative">

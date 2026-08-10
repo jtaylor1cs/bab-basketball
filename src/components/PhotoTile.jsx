@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { IconCamera, IconBasketball } from './icons'
 
-function PhotoTile({ src, alt = 'BAB Training session', color = '#B94B35', rotate = '0deg', className = '', style = {} }) {
+function PhotoTile({ src, alt = 'BAB Training session', color = '#B94B35', rotate = '0deg', icon, className = '', style = {} }) {
   const [failed, setFailed] = useState(false)
+  const Icon = icon || IconBasketball
 
   return (
     <div
@@ -37,7 +38,7 @@ function PhotoTile({ src, alt = 'BAB Training session', color = '#B94B35', rotat
         className="absolute top-2 right-2 rounded-full flex items-center justify-center"
         style={{ width: '24px', height: '24px', backgroundColor: '#EDE8D5', color }}
       >
-        <IconBasketball size={14} />
+        <Icon size={14} />
       </div>
     </div>
   )
