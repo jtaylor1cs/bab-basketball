@@ -6,8 +6,9 @@ function PhotoTile({ src, alt = 'BAB Training session', color = '#B94B35', rotat
 
   return (
     <div
-      className={`hard-shadow-sm rounded-lg overflow-hidden relative ${className}`}
+      className={`hard-shadow-sm rounded-lg overflow-hidden ${className}`}
       style={{
+        position: 'relative',
         backgroundColor: '#2C1A0E',
         border: '3px solid #2C1A0E',
         transform: `rotate(${rotate})`,

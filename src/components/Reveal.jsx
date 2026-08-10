@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-function Reveal({ children, delay = 0, className = '' }) {
+function Reveal({ children, delay = 0, className = '', style = {} }) {
   const ref = useRef(null)
   const [visible, setVisible] = useState(false)
 
@@ -24,7 +24,7 @@ function Reveal({ children, delay = 0, className = '' }) {
     <div
       ref={ref}
       className={`reveal ${visible ? 'is-visible' : ''} ${className}`}
-      style={{ transitionDelay: visible ? `${delay}ms` : '0ms' }}
+      style={{ ...style, transitionDelay: visible ? `${delay}ms` : '0ms' }}
     >
       {children}
     </div>

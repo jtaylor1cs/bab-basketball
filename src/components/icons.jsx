@@ -141,6 +141,17 @@ export function IconUsers({ size = 24, className = '', style = {} }) {
   )
 }
 
+export function IconHome({ size = 24, className = '', style = {} }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} style={style}>
+      <path d="M5 23L24 7l19 16" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M10 19v21h28V19" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
+      <path d="M20 40V27h8v13" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
+      <circle cx="24" cy="21" r="3.4" stroke="currentColor" strokeWidth="1.8" />
+    </svg>
+  )
+}
+
 export function IconCalendar({ size = 24, className = '', style = {} }) {
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} style={style}>

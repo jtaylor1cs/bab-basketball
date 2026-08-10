@@ -3,7 +3,6 @@ import ucMerced from '../assets/UCMercedFreeThrow.jpg'
 import kingsDribbling from "../assets/King'sDribbling.PNG"
 import sectionChamp from '../assets/SectionChampionship.PNG'
 import { IconTrophy, IconStar, IconUsers } from './icons'
-import FrameCorners from './FrameCorners'
 import Reveal from './Reveal'
 
 const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeKpqHvbFJSxcsAB_Gy7gbuOX0s1uPLK3cVf9AkOC_SX9kyNQ/viewform?usp=publish-editor'
@@ -12,6 +11,13 @@ const badges = [
   { icon: IconTrophy, label: '5+ Years Coaching' },
   { icon: IconStar, label: 'Starting Point Guard & Team Captain, UC Merced' },
   { icon: IconUsers, label: 'Section Champion, King’s Academy' },
+]
+
+const sidePhotos = [
+  { src: esfaceWorkout, alt: 'Coach Jon training', objectPosition: 'object-top', rotate: '-1.2deg', color: '#B94B35' },
+  { src: kingsDribbling, alt: 'Kings Academy', objectPosition: 'object-top', rotate: '1deg', color: '#4A7FA5' },
+  { src: ucMerced, alt: 'UC Merced', objectPosition: 'object-center', rotate: '-0.8deg', color: '#2D6A5A' },
+  { src: sectionChamp, alt: 'Section Championship', objectPosition: 'object-top', rotate: '1.2deg', color: '#C49A2D' },
 ]
 
 function About() {
@@ -67,74 +73,28 @@ function About() {
           </div>
         </Reveal>
 
-        <Reveal delay={150} className="flex-1 relative hidden md:block w-full">
-          <div className="relative w-full" style={{ height: '520px' }}>
+        <Reveal delay={150} className="hidden md:flex md:flex-col gap-4 shrink-0" style={{ width: '260px' }}>
+          {sidePhotos.map((photo) => (
             <div
-              className="absolute overflow-hidden rounded-md hard-border"
-              style={{
-                width: '58%',
-                height: '340px',
-                top: '0px',
-                left: '0px',
-                transform: 'rotate(-2deg)',
-                zIndex: 2,
-                boxShadow: '6px 6px 0 rgba(44,26,14,0.9)',
-              }}
+              key={photo.alt}
+              className="overflow-hidden rounded-md hard-border hard-shadow-sm"
+              style={{ height: '150px', transform: `rotate(${photo.rotate})`, borderLeft: `5px solid ${photo.color}` }}
             >
-              <img src={esfaceWorkout} alt="Coach Jon training" className="absolute inset-0 w-full h-full object-cover object-top" />
-              <FrameCorners color="#EDE8D5" />
+              <img src={photo.src} alt={photo.alt} className={`w-full h-full object-cover ${photo.objectPosition}`} />
             </div>
-            <div
-              className="absolute overflow-hidden rounded-md hard-border"
-              style={{
-                width: '50%',
-                height: '300px',
-                top: '20px',
-                right: '0px',
-                transform: 'rotate(2.5deg)',
-                zIndex: 1,
-                boxShadow: '6px 6px 0 rgba(44,26,14,0.9)',
-              }}
-            >
-              <img src={kingsDribbling} alt="Kings Academy" className="absolute inset-0 w-full h-full object-cover object-top" />
-            </div>
-            <div
-              className="absolute overflow-hidden rounded-md hard-border"
-              style={{
-                width: '48%',
-                height: '240px',
-                bottom: '0px',
-                left: '10px',
-                transform: 'rotate(1.5deg)',
-                zIndex: 3,
-                boxShadow: '6px 6px 0 rgba(44,26,14,0.9)',
-              }}
-            >
-              <img src={ucMerced} alt="UC Merced" className="absolute inset-0 w-full h-full object-cover" />
-            </div>
-            <div
-              className="absolute overflow-hidden rounded-md hard-border"
-              style={{
-                width: '50%',
-                height: '220px',
-                bottom: '10px',
-                right: '0px',
-                transform: 'rotate(-1.5deg)',
-                zIndex: 4,
-                boxShadow: '6px 6px 0 rgba(44,26,14,0.9)',
-              }}
-            >
-              <img src={sectionChamp} alt="Section Championship" className="absolute inset-0 w-full h-full object-cover object-top" />
-              <FrameCorners color="#EDE8D5" />
-            </div>
-          </div>
+          ))}
         </Reveal>
 
         <div className="flex-1 grid grid-cols-2 gap-3 md:hidden">
-          <img src={esfaceWorkout} alt="Coach Jon training" className="w-full object-cover object-top rounded-md hard-border" style={{ height: '180px' }} />
-          <img src={kingsDribbling} alt="Kings Academy" className="w-full object-cover object-top rounded-md hard-border" style={{ height: '180px' }} />
-          <img src={ucMerced} alt="UC Merced" className="w-full object-cover rounded-md hard-border" style={{ height: '180px' }} />
-          <img src={sectionChamp} alt="Section Championship" className="w-full object-cover object-top rounded-md hard-border" style={{ height: '180px' }} />
+          {sidePhotos.map((photo) => (
+            <img
+              key={photo.alt}
+              src={photo.src}
+              alt={photo.alt}
+              className={`w-full object-cover rounded-md hard-border ${photo.objectPosition}`}
+              style={{ height: '180px' }}
+            />
+          ))}
         </div>
       </div>
     </section>

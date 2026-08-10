@@ -12,6 +12,7 @@ Hero section (top of homepage collage — use action shots of kids training):
   hero-1.jpg
   hero-2.jpg
   hero-3.jpg
+  hero-4.jpg
 
 Any photo orientation works — they'll be cropped to fill each frame.
 The website will pick them up automatically once the files are in this

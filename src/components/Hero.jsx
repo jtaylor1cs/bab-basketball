@@ -1,5 +1,4 @@
-import { IconBasketball, IconChevronRow, IconStar, IconSwish, IconUsers } from './icons'
-import FrameCorners from './FrameCorners'
+import { IconBasketball, IconChevronRow, IconStar, IconSwish } from './icons'
 import PhotoTile from './PhotoTile'
 import Reveal from './Reveal'
 
@@ -11,12 +10,13 @@ const chips = [
   { label: '20+ Kids Trained', color: '#C49A2D' },
 ]
 
-// Drop action shots into public/gallery/ named hero-1.jpg, hero-2.jpg, hero-3.jpg
+// Drop action shots into public/gallery/ named hero-1.jpg ... hero-4.jpg
 // and they'll swap in here automatically — no code changes needed.
 const heroPhotos = [
-  { src: '/gallery/hero-1.jpg', color: '#B94B35' },
-  { src: '/gallery/hero-2.jpg', color: '#4A7FA5' },
-  { src: '/gallery/hero-3.jpg', color: '#2D6A5A' },
+  { src: '/gallery/hero-1.jpg', color: '#B94B35', rotate: '-3deg', style: { position: 'absolute', width: '58%', height: '64%', top: '0%', left: '2%', zIndex: 2 } },
+  { src: '/gallery/hero-2.jpg', color: '#4A7FA5', rotate: '4deg', style: { position: 'absolute', width: '46%', height: '48%', top: '2%', right: '0%', zIndex: 1 } },
+  { src: '/gallery/hero-3.jpg', color: '#2D6A5A', rotate: '3deg', style: { position: 'absolute', width: '50%', height: '50%', bottom: '0%', left: '0%', zIndex: 3 } },
+  { src: '/gallery/hero-4.jpg', color: '#C49A2D', rotate: '-2deg', style: { position: 'absolute', width: '44%', height: '44%', bottom: '3%', right: '2%', zIndex: 4 } },
 ]
 
 function Hero() {
@@ -113,66 +113,26 @@ function Hero() {
           </div>
         </div>
 
-        <Reveal delay={150}>
-          <div className="relative mx-auto" style={{ maxWidth: '420px' }}>
-            <div
-              className="absolute"
-              style={{
-                inset: '18px -18px -18px 18px',
-                backgroundColor: '#C49A2D',
-                borderRadius: '10px',
-                transform: 'rotate(3deg)',
-                zIndex: 0,
-              }}
+        <Reveal
+          delay={150}
+          className="relative w-full md:ml-auto"
+          style={{ height: 'clamp(440px, 54vw, 620px)', maxWidth: '600px' }}
+        >
+          {heroPhotos.map((photo) => (
+            <PhotoTile
+              key={photo.src}
+              src={photo.src}
+              color={photo.color}
+              rotate={photo.rotate}
+              alt="Kid training in action with BAB Training"
+              style={photo.style}
             />
-            <div
-              className="relative hard-border"
-              style={{
-                backgroundColor: '#2C1A0E',
-                borderRadius: '10px',
-                padding: '14px',
-                transform: 'rotate(-2deg)',
-                zIndex: 1,
-              }}
-            >
-              <div className="relative">
-                <div
-                  className="grid gap-2.5"
-                  style={{ gridTemplateColumns: '1.15fr 1fr', gridTemplateRows: '1fr 1fr', height: 'clamp(280px, 40vw, 380px)' }}
-                >
-                  <PhotoTile
-                    src={heroPhotos[0].src}
-                    color={heroPhotos[0].color}
-                    alt="Kid training with BAB Training"
-                    style={{ gridRow: '1 / span 2' }}
-                  />
-                  <PhotoTile src={heroPhotos[1].src} color={heroPhotos[1].color} alt="Kid training with BAB Training" />
-                  <PhotoTile src={heroPhotos[2].src} color={heroPhotos[2].color} alt="Kid training with BAB Training" />
-                </div>
-                <FrameCorners color="#EDE8D5" />
-              </div>
-
-              <div className="flex items-center gap-3 mt-3.5 px-1">
-                <IconBasketball size={26} style={{ color: '#C49A2D' }} />
-                <div className="text-left">
-                  <p className="font-display uppercase" style={{ color: '#EDE8D5', fontSize: 'clamp(1.3rem, 3vw, 1.7rem)', lineHeight: 1 }}>
-                    Kids In Training
-                  </p>
-                  <p className="text-xs font-bold uppercase tracking-widest mt-1" style={{ color: '#C49A2D' }}>
-                    Real Sessions · Real Reps
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="absolute hard-shadow-sm flex items-center gap-2 px-4 py-2 rounded"
-              style={{ backgroundColor: '#4A7FA5', color: '#EDE8D5', top: '-16px', right: '-4px', transform: 'rotate(-4deg)', zIndex: 2 }}
-            >
-              <IconUsers size={18} />
-              <span className="font-stat text-lg">20+ KIDS TRAINED</span>
-            </div>
-          </div>
+          ))}
+          <IconBasketball
+            size={44}
+            className="absolute float-anim pointer-events-none"
+            style={{ color: '#B94B35', top: '38%', left: '-6%', zIndex: 5, '--float-rot': '10deg' }}
+          />
         </Reveal>
       </div>
 

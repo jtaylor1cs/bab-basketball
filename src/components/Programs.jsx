@@ -1,6 +1,6 @@
 import groupImage from '../assets/YouthBasketballGroup.jpg'
 import oneOnOneImage from '../assets/YouthBasketball1-on-1.jpg'
-import { IconBasketball, IconHoop, IconUsers, IconStopwatch } from './icons'
+import { IconUsers, IconStopwatch, IconHome, IconCalendar } from './icons'
 import FrameCorners from './FrameCorners'
 import Reveal from './Reveal'
 
@@ -9,31 +9,30 @@ const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeKpqHvbFJSxcsAB_Gy7g
 const programs = [
   {
     id: 1,
-    tag: 'Ages 6-10',
-    icon: IconBasketball,
-    title: 'Junior Ballers',
-    grades: 'Grades 1-5',
-    description: 'Building the foundation the right way. We focus on fundamentals, coordination, ball handling, footwork, and keeping the game fun with competitive drills and games.',
+    tag: '2-6 Players',
+    icon: IconUsers,
+    title: 'Small Group Sessions',
+    schedule: 'Tuesdays & Thursdays · King’s Academy',
+    description: 'Train alongside other players at your speed. Competitive drills, live reps, and coaching built for small groups so everyone still gets real attention.',
+    price: '$70',
+    unit: '/ player',
     accentColor: '#B94B35',
     image: groupImage,
     imageAlt: 'Youth basketball small group training',
   },
   {
     id: 2,
-    tag: 'Ages 11-18',
-    icon: IconHoop,
-    title: 'Varsity Prep',
-    grades: 'Grades 6-12',
-    description: 'Training built for players who want to compete at the next level. Advanced ball handling, shooting mechanics, game IQ, and position-specific work at game speed.',
+    tag: 'Private Coaching',
+    icon: IconStopwatch,
+    title: '1-on-1 Sessions',
+    schedule: 'Tuesdays & Thursdays · King’s Academy',
+    description: 'Fully personalized training — every drill, correction, and rep built around you. The fastest way to sharpen your game and fix what’s holding it back.',
+    price: '$90',
+    unit: '/ session',
     accentColor: '#4A7FA5',
     image: oneOnOneImage,
     imageAlt: 'One on one basketball training',
   },
-]
-
-const sharedOptions = [
-  { icon: IconUsers, type: 'Small Group Session', detail: '2-6 players', price: '$70', unit: '/ player' },
-  { icon: IconStopwatch, type: '1-on-1 Session', detail: 'Private training', price: '$90', unit: '/ session' },
 ]
 
 function Programs() {
@@ -45,13 +44,10 @@ function Programs() {
             What We Offer
           </p>
           <h2 className="font-display uppercase text-5xl md:text-6xl mb-4" style={{ color: '#2C1A0E' }}>
-            Training Programs
+            Training Options
           </h2>
           <p style={{ color: '#2C1A0E' }} className="text-lg opacity-50 max-w-xl mx-auto mb-2">
             Every session is led by an active college basketball player with 5+ years of coaching experience.
-          </p>
-          <p style={{ color: '#2C1A0E' }} className="text-xs opacity-40 max-w-lg mx-auto">
-            Sessions run Tuesdays &amp; Thursdays at King&apos;s Academy in Sunnyvale.
           </p>
         </div>
       </Reveal>
@@ -107,7 +103,7 @@ function Programs() {
               >
                 <div>
                   <p style={{ color: program.accentColor }} className="text-sm font-bold tracking-widest uppercase mb-1">
-                    {program.grades}
+                    {program.schedule}
                   </p>
                   <h3 className="font-display uppercase text-3xl md:text-4xl" style={{ color: '#2C1A0E' }}>
                     {program.title}
@@ -118,25 +114,17 @@ function Programs() {
                   {program.description}
                 </p>
 
-                <div className="flex flex-col gap-3">
-                  {sharedOptions.map((option) => (
-                    <div
-                      key={option.type}
-                      style={{ border: '2.5px solid #2C1A0E', borderRadius: '8px' }}
-                      className="flex justify-between items-center px-5 py-3"
-                    >
-                      <div className="flex items-center gap-3">
-                        <option.icon size={26} style={{ color: program.accentColor }} />
-                        <div>
-                          <p style={{ color: '#2C1A0E' }} className="font-bold">{option.type}</p>
-                          <p style={{ color: '#2C1A0E' }} className="text-sm opacity-50">{option.detail}</p>
-                        </div>
-                      </div>
-                      <p style={{ color: program.accentColor }} className="text-2xl font-stat">
-                        {option.price}<span className="text-sm opacity-60">{option.unit}</span>
-                      </p>
-                    </div>
-                  ))}
+                <div
+                  style={{ border: '2.5px solid #2C1A0E', borderRadius: '8px' }}
+                  className="flex justify-between items-center px-5 py-4"
+                >
+                  <div className="flex items-center gap-3">
+                    <program.icon size={26} style={{ color: program.accentColor }} />
+                    <p style={{ color: '#2C1A0E' }} className="font-bold">{program.title}</p>
+                  </div>
+                  <p style={{ color: program.accentColor }} className="text-2xl font-stat">
+                    {program.price}<span className="text-sm opacity-60">{program.unit}</span>
+                  </p>
                 </div>
 
                 <a href={FORM_URL} target="_blank" rel="noreferrer">
@@ -151,6 +139,49 @@ function Programs() {
             </div>
           </Reveal>
         ))}
+
+        <Reveal delay={240}>
+          <div
+            style={{ backgroundColor: '#2C1A0E', borderRadius: '14px' }}
+            className="hard-shadow relative overflow-hidden flex flex-col md:flex-row items-center gap-8 px-6 md:px-10 py-10"
+          >
+            <div className="halftone absolute inset-0 pointer-events-none" style={{ color: '#EDE8D5', opacity: 0.05 }} />
+            <div
+              className="rounded-full flex items-center justify-center shrink-0 hard-shadow-sm relative"
+              style={{ width: '84px', height: '84px', backgroundColor: '#C49A2D', color: '#2C1A0E' }}
+            >
+              <IconHome size={44} />
+            </div>
+            <div className="flex-1 relative text-center md:text-left">
+              <div className="flex items-center gap-2 justify-center md:justify-start mb-1">
+                <p style={{ color: '#C49A2D' }} className="text-sm font-bold tracking-widest uppercase">
+                  We Come To You
+                </p>
+              </div>
+              <h3 className="font-display uppercase text-3xl md:text-4xl mb-2" style={{ color: '#EDE8D5' }}>
+                At-Home Sessions
+              </h3>
+              <p style={{ color: '#EDE8D5' }} className="opacity-70 leading-relaxed max-w-xl">
+                Can&apos;t make it to King&apos;s Academy? I&apos;ll travel to you for a private session — any day of
+                the week, wherever you&apos;ve got a hoop. Message to check availability and rates for your location.
+              </p>
+              <div className="flex items-center gap-2 justify-center md:justify-start mt-3">
+                <IconCalendar size={18} style={{ color: '#C49A2D' }} />
+                <p style={{ color: '#C49A2D' }} className="text-sm font-bold uppercase tracking-widest">
+                  Any Day of the Week
+                </p>
+              </div>
+            </div>
+            <a href={FORM_URL} target="_blank" rel="noreferrer" className="relative shrink-0">
+              <button
+                style={{ backgroundColor: '#B94B35', color: '#EDE8D5' }}
+                className="py-4 px-8 font-bold rounded tracking-wide hover:opacity-90 transition hard-shadow-sm whitespace-nowrap"
+              >
+                Ask About At-Home
+              </button>
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   )
