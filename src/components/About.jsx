@@ -10,7 +10,7 @@ const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeKpqHvbFJSxcsAB_Gy7g
 
 const badges = [
   { icon: IconTrophy, label: '5+ Years Coaching' },
-  { icon: IconStar, label: 'Team Captain, UC Merced' },
+  { icon: IconStar, label: 'Starting Point Guard & Team Captain, UC Merced' },
   { icon: IconUsers, label: 'Section Champion, King’s Academy' },
 ]
 

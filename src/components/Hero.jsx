@@ -1,6 +1,6 @@
-import heroPhoto from '../assets/UCMercedFreeThrow.jpg'
-import { IconBasketball, IconChevronRow, IconStar, IconSwish } from './icons'
+import { IconBasketball, IconChevronRow, IconStar, IconSwish, IconUsers } from './icons'
 import FrameCorners from './FrameCorners'
+import PhotoTile from './PhotoTile'
 import Reveal from './Reveal'
 
 const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeKpqHvbFJSxcsAB_Gy7gbuOX0s1uPLK3cVf9AkOC_SX9kyNQ/viewform?usp=publish-editor'
@@ -8,7 +8,15 @@ const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeKpqHvbFJSxcsAB_Gy7g
 const chips = [
   { label: 'Tue & Thu Sessions', color: '#2D6A5A' },
   { label: '$70 Group · $90 1-on-1', color: '#B94B35' },
-  { label: '15+ Kids Trained', color: '#C49A2D' },
+  { label: '20+ Kids Trained', color: '#C49A2D' },
+]
+
+// Drop action shots into public/gallery/ named hero-1.jpg, hero-2.jpg, hero-3.jpg
+// and they'll swap in here automatically — no code changes needed.
+const heroPhotos = [
+  { src: '/gallery/hero-1.jpg', color: '#B94B35' },
+  { src: '/gallery/hero-2.jpg', color: '#4A7FA5' },
+  { src: '/gallery/hero-3.jpg', color: '#2D6A5A' },
 ]
 
 function Hero() {
@@ -127,26 +135,31 @@ function Hero() {
                 zIndex: 1,
               }}
             >
-              <div className="relative overflow-hidden rounded" style={{ aspectRatio: '4 / 5' }}>
-                <img
-                  src={heroPhoto}
-                  alt="Coach Jon Taylor playing basketball for UC Merced"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  style={{ filter: 'saturate(1.05) contrast(1.05)' }}
-                />
+              <div className="relative">
                 <div
-                  className="absolute inset-0"
-                  style={{ background: 'linear-gradient(180deg, rgba(44,26,14,0) 55%, rgba(44,26,14,0.65) 100%)' }}
-                />
-                <div className="halftone absolute inset-0 pointer-events-none" style={{ color: '#EDE8D5', opacity: 0.08 }} />
+                  className="grid gap-2.5"
+                  style={{ gridTemplateColumns: '1.15fr 1fr', gridTemplateRows: '1fr 1fr', height: 'clamp(280px, 40vw, 380px)' }}
+                >
+                  <PhotoTile
+                    src={heroPhotos[0].src}
+                    color={heroPhotos[0].color}
+                    alt="Kid training with BAB Training"
+                    style={{ gridRow: '1 / span 2' }}
+                  />
+                  <PhotoTile src={heroPhotos[1].src} color={heroPhotos[1].color} alt="Kid training with BAB Training" />
+                  <PhotoTile src={heroPhotos[2].src} color={heroPhotos[2].color} alt="Kid training with BAB Training" />
+                </div>
                 <FrameCorners color="#EDE8D5" />
+              </div>
 
-                <div className="absolute left-4 bottom-4 right-4 text-left">
-                  <p className="font-display uppercase" style={{ color: '#EDE8D5', fontSize: 'clamp(1.6rem, 4vw, 2.2rem)', lineHeight: 1 }}>
-                    Coach Jon Taylor
+              <div className="flex items-center gap-3 mt-3.5 px-1">
+                <IconBasketball size={26} style={{ color: '#C49A2D' }} />
+                <div className="text-left">
+                  <p className="font-display uppercase" style={{ color: '#EDE8D5', fontSize: 'clamp(1.3rem, 3vw, 1.7rem)', lineHeight: 1 }}>
+                    Kids In Training
                   </p>
                   <p className="text-xs font-bold uppercase tracking-widest mt-1" style={{ color: '#C49A2D' }}>
-                    UC Merced · Team Captain
+                    Real Sessions · Real Reps
                   </p>
                 </div>
               </div>
@@ -156,8 +169,8 @@ function Hero() {
               className="absolute hard-shadow-sm flex items-center gap-2 px-4 py-2 rounded"
               style={{ backgroundColor: '#4A7FA5', color: '#EDE8D5', top: '-16px', right: '-4px', transform: 'rotate(-4deg)', zIndex: 2 }}
             >
-              <IconBasketball size={18} />
-              <span className="font-stat text-lg">5+ YRS COACHING</span>
+              <IconUsers size={18} />
+              <span className="font-stat text-lg">20+ KIDS TRAINED</span>
             </div>
           </div>
         </Reveal>

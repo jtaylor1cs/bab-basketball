@@ -10,7 +10,7 @@ const days = [
 
 const details = [
   { icon: IconClipboard, label: 'Location', value: "King's Academy, Sunnyvale" },
-  { icon: IconStopwatch, label: 'Session Length', value: '50 minutes' },
+  { icon: IconStopwatch, label: 'Session Length', value: '50 Min · Elite Skill Training' },
   { icon: IconUsers, label: 'Group Size', value: '2-6 players max' },
   { icon: IconCalendar, label: 'Session Time', value: 'Evenings' },
 ]

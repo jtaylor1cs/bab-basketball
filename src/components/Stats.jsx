@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
-import { IconUsers, IconTrophy, IconCalendar, IconStopwatch } from './icons'
+import { IconUsers, IconTrophy, IconWhistle, IconStopwatch } from './icons'
 
 const stats = [
-  { icon: IconUsers, value: 15, suffix: '+', label: 'Kids Trained', color: '#B94B35' },
+  { icon: IconUsers, value: 20, suffix: '+', label: 'Kids Trained', color: '#B94B35' },
   { icon: IconTrophy, value: 5, suffix: '+', label: 'Years Coaching', color: '#4A7FA5' },
-  { icon: IconCalendar, value: 2, suffix: '', label: 'Training Days / Week', color: '#2D6A5A' },
-  { icon: IconStopwatch, value: 50, suffix: ' min', label: 'Focused Sessions', color: '#C49A2D' },
+  { icon: IconStopwatch, value: 50, suffix: ' min', label: 'Elite Skill Sessions', color: '#C49A2D' },
+  { icon: IconWhistle, value: 6, suffix: '', label: 'Max Group Size', color: '#2D6A5A' },
 ]
 
 function CountUp({ target, suffix, active }) {

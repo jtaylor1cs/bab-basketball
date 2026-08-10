@@ -4,7 +4,7 @@ const items = [
   'TUESDAYS & THURSDAYS',
   'SMALL GROUP $70',
   '1-ON-1 $90',
-  '15+ KIDS TRAINED',
+  '20+ KIDS TRAINED',
   "KING'S ACADEMY · SUNNYVALE",
 ]
 
