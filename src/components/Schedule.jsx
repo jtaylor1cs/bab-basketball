@@ -1,117 +1,103 @@
+import { IconCalendar, IconUsers, IconStopwatch, IconClipboard } from './icons'
+import Reveal from './Reveal'
+
+const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeKpqHvbFJSxcsAB_Gy7gbuOX0s1uPLK3cVf9AkOC_SX9kyNQ/viewform?usp=publish-editor'
+
+const days = [
+  { day: 'Tuesday', color: '#B94B35' },
+  { day: 'Thursday', color: '#4A7FA5' },
+]
+
+const details = [
+  { icon: IconClipboard, label: 'Location', value: "King's Academy, Sunnyvale" },
+  { icon: IconStopwatch, label: 'Session Length', value: '50 minutes' },
+  { icon: IconUsers, label: 'Group Size', value: '2-6 players max' },
+  { icon: IconCalendar, label: 'Session Time', value: 'Evenings' },
+]
+
 function Schedule() {
   return (
-    <section id="schedule" style={{ backgroundColor: '#EDE8D5' }} className="py-32">
-      <div className="max-w-3xl mx-auto px-8">
+    <section id="schedule" style={{ backgroundColor: '#EDE8D5' }} className="py-28">
+      <div className="max-w-4xl mx-auto px-6 md:px-8">
+        <Reveal>
+          <div className="text-center mb-12">
+            <p style={{ color: '#B94B35' }} className="text-sm font-bold tracking-widest uppercase mb-3">
+              When We Train
+            </p>
+            <h2 className="font-display uppercase text-5xl md:text-6xl mb-4" style={{ color: '#2C1A0E' }}>
+              Weekly Schedule
+            </h2>
+            <p style={{ color: '#2C1A0E' }} className="text-lg opacity-50">
+              Training runs twice a week — small group and 1-on-1 sessions both available.
+            </p>
+          </div>
+        </Reveal>
 
-        <div className="text-center mb-12">
-          <p style={{ color: '#B94B35' }} className="text-sm font-bold tracking-widest uppercase mb-3">
-            When We Train
-          </p>
-          <h2 style={{ color: '#2C1A0E' }} className="text-5xl font-bold mb-4">
-            Summer Schedule
-          </h2>
-          <p style={{ color: '#2C1A0E' }} className="text-lg opacity-50">
-            Summer sessions run from May 19th to August 20th. No sessions the week of July 4th.
-          </p>
+        <div className="grid sm:grid-cols-2 gap-6 mb-8">
+          {days.map((item, i) => (
+            <Reveal key={item.day} delay={i * 120}>
+              <div
+                className="hard-shadow rounded-xl overflow-hidden h-full"
+                style={{ backgroundColor: '#F5EFE0' }}
+              >
+                <div style={{ backgroundColor: item.color, borderBottom: '3px solid #2C1A0E' }} className="px-6 py-5">
+                  <p style={{ color: '#EDE8D5' }} className="text-xs font-bold tracking-widest uppercase mb-1 opacity-80">
+                    Evening Sessions
+                  </p>
+                  <h3 className="font-display uppercase text-3xl" style={{ color: '#EDE8D5' }}>
+                    {item.day}
+                  </h3>
+                </div>
+                <div className="px-6 py-5 flex flex-col gap-3">
+                  <div style={{ border: '2px solid #2C1A0E', borderRadius: '8px' }} className="flex justify-between items-center px-4 py-3">
+                    <p style={{ color: '#2C1A0E' }} className="font-bold text-sm">Small Group</p>
+                    <p className="font-stat text-xl" style={{ color: item.color }}>$70</p>
+                  </div>
+                  <div style={{ border: '2px solid #2C1A0E', borderRadius: '8px' }} className="flex justify-between items-center px-4 py-3">
+                    <p style={{ color: '#2C1A0E' }} className="font-bold text-sm">1-on-1</p>
+                    <p className="font-stat text-xl" style={{ color: item.color }}>$90</p>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          ))}
         </div>
 
-        <div
-          style={{
-            backgroundColor: '#F5EFE0',
-            border: '2px solid #2C1A0E',
-            borderRadius: '12px',
-            overflow: 'hidden',
-          }}
-        >
+        <Reveal delay={100}>
           <div
-            style={{ backgroundColor: '#B94B35', borderBottom: '2px solid #2C1A0E' }}
-            className="px-8 py-5 flex justify-between items-center"
+            style={{ backgroundColor: '#F5EFE0', border: '2.5px solid #2C1A0E', borderRadius: '12px' }}
+            className="px-6 md:px-8 py-6 grid sm:grid-cols-2 gap-4"
           >
-            <div>
-              <p style={{ color: '#EDE8D5' }} className="text-xs font-bold tracking-widest uppercase mb-1">
-                Small Group or Private Training
-              </p>
-              <h3 style={{ color: '#EDE8D5' }} className="text-2xl font-bold">
-                Tuesdays — Evenings
-              </h3>
-            </div>
-          </div>
-
-          <div className="px-8 py-5 flex flex-col gap-3" style={{ borderBottom: '2px solid #2C1A0E' }}>
-            {[
-              { title: 'Junior Ballers', grades: 'Grades 1-5' },
-              { title: 'Varsity Prep', grades: 'Grades 6-12' },
-            ].map((item) => (
-              <div
-                key={item.title}
-                style={{ border: '2px solid #2C1A0E', borderRadius: '8px' }}
-                className="flex justify-between items-center px-5 py-3"
-              >
-                <p style={{ color: '#2C1A0E' }} className="font-bold">{item.title}</p>
-                <p style={{ color: '#2C1A0E' }} className="text-sm opacity-50">{item.grades}</p>
+            {details.map((item) => (
+              <div key={item.label} className="flex items-center gap-4">
+                <div
+                  className="rounded-full flex items-center justify-center shrink-0"
+                  style={{ width: '44px', height: '44px', backgroundColor: '#EDE8D5', border: '2px solid #2C1A0E', color: '#B94B35' }}
+                >
+                  <item.icon size={22} />
+                </div>
+                <div>
+                  <p style={{ color: '#2C1A0E' }} className="text-xs opacity-50 font-bold tracking-wide uppercase">{item.label}</p>
+                  <p style={{ color: '#2C1A0E' }} className="font-bold">{item.value}</p>
+                </div>
               </div>
             ))}
           </div>
-
-          <div
-            style={{ backgroundColor: '#4A7FA5', borderBottom: '2px solid #2C1A0E' }}
-            className="px-8 py-5"
-          >
-            <p style={{ color: '#EDE8D5' }} className="text-xs font-bold tracking-widest uppercase mb-1">
-              Private Training
-            </p>
-            <h3 style={{ color: '#EDE8D5' }} className="text-2xl font-bold">
-              Thursdays — Evenings
-            </h3>
-          </div>
-          
-          <div className="px-8 py-5" style={{ borderBottom: '2px solid #2C1A0E' }}>
-            <div
-              style={{ border: '2px solid #2C1A0E', borderRadius: '8px' }}
-              className="flex justify-between items-center px-5 py-3"
-            >
-              <p style={{ color: '#2C1A0E' }} className="font-bold">1-on-1 Sessions</p>
-              <p style={{ color: '#2C1A0E' }} className="text-sm opacity-50">Grades 1-12 · 3 slots per evening</p>
-            </div>
-            <p style={{ color: '#2C1A0E' }} className="text-s opacity-100 mt-3">
-    * Other days may be available on inquiry
-  </p>
-          </div>
-
-          <div className="px-8 py-5">
-  {[
-    { label: 'Location', value: "King's Academy, Sunnyvale" },
-    { label: 'Session Length', value: '50 minutes' },
-    { label: 'Season', value: 'May 19 - August 20th' },
-    { label: 'Break Week', value: 'Week of June 2nd' },
-    { label: 'Group Size', value: '2-6 players max' },
-  ].map((item, i, arr) => (
-    <div
-      key={item.label}
-      style={{ borderBottom: i < arr.length - 1 ? '1px solid rgba(44,26,14,0.15)' : 'none' }}
-      className="flex justify-between items-center py-3"
-    >
-      <p style={{ color: '#2C1A0E' }} className="text-sm opacity-50 font-bold tracking-wide uppercase">{item.label}</p>
-      <p style={{ color: '#2C1A0E' }} className="font-bold">{item.value}</p>
-    </div>
-  ))}
-  {/* <p style={{ color: '#2C1A0E' }} className="text-s opacity-100 mt-3">
-    * Other days may be available on inquiry
-  </p> */}
-</div>
-        </div>
+        </Reveal>
 
         <div className="text-center mt-10">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKpqHvbFJSxcsAB_Gy7gbuOX0s1uPLK3cVf9AkOC_SX9kyNQ/viewform?usp=publish-editor" target="_blank" rel="noreferrer">
-  <button
-    style={{ backgroundColor: '#B94B35', color: '#EDE8D5' }}
-    className="px-10 py-4 text-lg font-bold rounded tracking-wide hover:opacity-90 transition"
-  >
-    Reserve Your Spot
-  </button>
-</a>
+          <a href={FORM_URL} target="_blank" rel="noreferrer">
+            <button
+              style={{ backgroundColor: '#B94B35', color: '#EDE8D5' }}
+              className="px-10 py-4 text-lg font-bold rounded tracking-wide hover:opacity-90 transition hard-shadow-sm"
+            >
+              Reserve Your Spot
+            </button>
+          </a>
+          <p style={{ color: '#2C1A0E' }} className="text-sm opacity-40 mt-4">
+            Other days may be available on inquiry — reach out to ask.
+          </p>
         </div>
-
       </div>
     </section>
   )
