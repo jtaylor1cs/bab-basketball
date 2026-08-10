@@ -13,17 +13,35 @@ const badges = [
   { icon: IconUsers, label: 'Section Champion, King’s Academy' },
 ]
 
-const sidePhotos = [
-  { src: esfaceWorkout, alt: 'Coach Jon training', objectPosition: 'object-top', rotate: '-1.2deg', color: '#B94B35', height: '270px' },
-  { src: kingsDribbling, alt: 'Kings Academy', objectPosition: 'object-top', rotate: '1deg', color: '#4A7FA5', height: '270px' },
-  { src: ucMerced, alt: 'UC Merced', objectPosition: 'object-center', rotate: '-0.8deg', color: '#2D6A5A', height: '270px' },
-  { src: sectionChamp, alt: 'Section Championship', objectPosition: 'object-top', rotate: '1.2deg', color: '#C49A2D', height: '150px' },
+// Left column and right column (right column starts staggered lower, so the
+// pair reads like a collage instead of one flat line of photos).
+const leftColumn = [
+  { src: esfaceWorkout, alt: 'Coach Jon training', rotate: '-1.5deg', color: '#B94B35' },
+  { src: kingsDribbling, alt: 'Kings Academy', rotate: '1deg', color: '#4A7FA5' },
 ]
+
+const rightColumn = [
+  { src: ucMerced, alt: 'UC Merced', rotate: '1.5deg', color: '#2D6A5A' },
+  { src: sectionChamp, alt: 'Section Championship', rotate: '-1deg', color: '#C49A2D' },
+]
+
+const mobilePhotos = [...leftColumn, ...rightColumn]
+
+function PhotoFrame({ photo, className = '' }) {
+  return (
+    <div
+      className={`rounded-md hard-border hard-shadow-sm flex items-center justify-center overflow-hidden ${className}`}
+      style={{ backgroundColor: '#F5EFE0', transform: `rotate(${photo.rotate})`, borderLeft: `5px solid ${photo.color}` }}
+    >
+      <img src={photo.src} alt={photo.alt} className="max-w-full max-h-full w-auto h-auto object-contain" />
+    </div>
+  )
+}
 
 function About() {
   return (
     <section id="about" style={{ backgroundColor: '#EDE8D5' }}>
-      <div className="max-w-6xl mx-auto px-6 md:px-8 flex flex-col md:flex-row gap-14 items-start py-28">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 flex flex-col md:flex-row gap-14 items-start md:items-stretch py-28">
 
         <Reveal className="flex-1">
           <div className="flex flex-col gap-6">
@@ -73,27 +91,23 @@ function About() {
           </div>
         </Reveal>
 
-        <Reveal delay={150} className="hidden md:flex md:flex-col gap-4 shrink-0" style={{ width: '230px' }}>
-          {sidePhotos.map((photo) => (
-            <div
-              key={photo.alt}
-              className="overflow-hidden rounded-md hard-border hard-shadow-sm"
-              style={{ height: photo.height, transform: `rotate(${photo.rotate})`, borderLeft: `5px solid ${photo.color}` }}
-            >
-              <img src={photo.src} alt={photo.alt} className={`w-full h-full object-cover ${photo.objectPosition}`} />
-            </div>
-          ))}
+        <Reveal delay={150} className="hidden md:flex gap-4 shrink-0" style={{ width: '300px' }}>
+          <div className="flex flex-col gap-4" style={{ width: '48%' }}>
+            {leftColumn.map((photo) => (
+              <PhotoFrame key={photo.alt} photo={photo} className="flex-1" />
+            ))}
+          </div>
+          <div className="flex flex-col gap-4" style={{ width: '48%' }}>
+            <div style={{ flex: '0 0 44px' }} />
+            {rightColumn.map((photo) => (
+              <PhotoFrame key={photo.alt} photo={photo} className="flex-1" />
+            ))}
+          </div>
         </Reveal>
 
         <div className="flex-1 grid grid-cols-2 gap-3 md:hidden">
-          {sidePhotos.map((photo) => (
-            <img
-              key={photo.alt}
-              src={photo.src}
-              alt={photo.alt}
-              className={`w-full object-cover rounded-md hard-border ${photo.objectPosition}`}
-              style={{ height: '180px' }}
-            />
+          {mobilePhotos.map((photo) => (
+            <PhotoFrame key={photo.alt} photo={photo} className="h-48" />
           ))}
         </div>
       </div>

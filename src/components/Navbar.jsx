@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import logo from '../assets/BABLogo.png'
-import { IconSwish } from './icons'
+import { IconBasketball } from './icons'
 
 const links = [
   { id: 'hero', label: 'Home' },
@@ -63,7 +63,7 @@ function Navbar() {
             className="cursor-pointer px-5 py-2 rounded hover:opacity-90 transition flex items-center gap-2 hard-shadow-sm"
             onClick={() => scrollTo('contact')}
           >
-            <IconSwish size={16} />
+            <IconBasketball size={16} />
             Sign Up
           </li>
         </ul>
@@ -148,7 +148,9 @@ function Navbar() {
               marginTop: '8px',
               borderRadius: '6px',
             }}
+            className="flex items-center justify-center gap-2"
           >
+            <IconBasketball size={18} />
             Sign Up
           </button>
         </div>
