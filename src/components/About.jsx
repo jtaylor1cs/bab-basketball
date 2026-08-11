@@ -93,7 +93,7 @@ function About() {
           </div>
         </Reveal>
 
-        <Reveal delay={150} className="hidden md:flex gap-4 shrink-0" style={{ width: '300px' }}>
+        <Reveal delay={150} className="hidden md:flex gap-4 shrink-0" style={{ width: '400px' }}>
           <div className="flex flex-col gap-4 justify-center" style={{ width: '48%' }}>
             {leftColumn.map((photo) => (
               <PhotoFrame key={photo.alt} photo={photo} style={{ aspectRatio: photo.ratio }} />
@@ -108,7 +108,7 @@ function About() {
 
         <div className="flex-1 grid grid-cols-2 gap-3 md:hidden">
           {mobilePhotos.map((photo) => (
-            <PhotoFrame key={photo.alt} photo={photo} className="h-48" />
+            <PhotoFrame key={photo.alt} photo={photo} className="h-60" />
           ))}
         </div>
       </div>
